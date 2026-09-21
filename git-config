@@ -1,0 +1,1771 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logAllRefUpdates = false
+[protocol]
+	version = 2
+[url "https://git.kernel.org/pub/scm/linux/kernel/git/"]
+	insteadOf = korg:
+[url "https://git.kernel.org/pub/scm/fs/"]
+	insteadOf = korgfs:
+[url "https://github.com/"]
+	insteadof = gh:
+[url "https://gitlab.freedesktop.org/"]
+	insteadOf = gfo:
+[rerere]
+	enabled = true
+[gc]
+	rerereresolved = 180
+	auto = 0
+[merge "ours"]
+	name = \"always keep ours\" merge driver
+	driver = touch %A
+[remote "origin"]
+	url = korg:torvalds/linux.git
+	fetch = refs/heads/master:refs/remotes/origin/master
+[remote "history"]
+	url = file:///home/sfr/kernels/next/next-history.git
+	push = +refs/heads/master:refs/heads/master
+	push = +refs/tags/*:refs/tags/*
+	skipDefaultUpdate = true
+[remote "korg"]
+	url = korg:next/linux-next.git
+	fetch = refs/heads/stable:refs/heads/stable
+	fetch = +refs/heads/pending-fixes:refs/heads/pending-fixes
+	fetch = +refs/heads/fs-current:refs/heads/fs-current
+	fetch = +refs/heads/fs-next:refs/heads/fs-next
+	fetch = +refs/tags/*:refs/tags/*
+	pushurl = ssh://git@gitolite.kernel.org/pub/scm/linux/kernel/git/next/linux-next.git
+	push = +refs/heads/master:refs/heads/master
+	push = refs/heads/stable:refs/heads/stable
+	push = +refs/heads/pending-fixes:refs/heads/pending-fixes
+	push = +refs/heads/fs-current:refs/heads/fs-current
+	push = +refs/heads/fs-next:refs/heads/fs-next
+	push = +refs/tags/*:refs/tags/*
+	skipDefaultUpdate = true
+[remote "korg-history"]
+	url = korg:next/linux-next-history.git
+	pushurl = ssh://gitolite.kernel.org/pub/scm/linux/kernel/git/next/linux-next-history.git
+	push = +refs/heads/master:refs/heads/master
+	push = +refs/tags/*:refs/tags/*
+	skipDefaultUpdate = true
+[remote "hid"]
+	url = korg:hid/hid.git
+	fetch = +refs/heads/for-next:refs/remotes/hid/for-next
+	tagopt = --no-tags
+[remote "v4l-dvb"]
+	url = git://linuxtv.org/media-ci/media-pending.git
+	fetch = +refs/heads/next:refs/remotes/v4l-dvb/next
+	tagopt = --no-tags
+[remote "v4l-dvb-next"]
+	url = git://linuxtv.org/mchehab/media-next.git
+	fetch = +refs/heads/master:refs/remotes/v4l-dvb-next/master
+	tagopt = --no-tags
+[remote "s390"]
+	url = korg:s390/linux.git
+	fetch = +refs/heads/for-next:refs/remotes/s390/for-next
+	tagopt = --no-tags
+[remote "jfs"]
+	url = gh:kleikamp/linux-shaggy.git
+	fetch = +refs/heads/jfs-next:refs/remotes/jfs/jfs-next
+	tagopt = --no-tags
+[remote "kbuild-current"]
+	url = korg:kbuild/linux.git
+	fetch = +refs/heads/kbuild-fixes-for-next:refs/remotes/kbuild-current/kbuild-fixes-for-next
+	tagopt = --no-tags
+[remote "kbuild"]
+	url = korg:kbuild/linux.git
+	fetch = +refs/heads/kbuild-for-next:refs/remotes/kbuild/kbuild-for-next
+	tagopt = --no-tags
+[remote "nfs"]
+	url = git://git.linux-nfs.org/projects/trondmy/nfs-2.6.git
+	fetch = +refs/heads/linux-next:refs/remotes/nfs/linux-next
+	tagopt = --no-tags
+[remote "xfs"]
+	url = korgfs:xfs/xfs-linux.git
+	fetch = +refs/heads/for-next:refs/remotes/xfs/for-next
+	tagopt = --no-tags
+[remote "kvm"]
+	url = git://git.kernel.org/pub/scm/virt/kvm/kvm.git
+	fetch = +refs/heads/next:refs/remotes/kvm/next
+	tagopt = --no-tags
+[remote "kvm-fixes"]
+	url = git://git.kernel.org/pub/scm/virt/kvm/kvm.git
+	tagopt = --no-tags
+	fetch = +refs/heads/master:refs/remotes/kvm-fixes/master
+[remote "dlm"]
+	url = korg:teigland/linux-dlm.git
+	fetch = +refs/heads/next:refs/remotes/dlm/next
+	tagopt = --no-tags
+[remote "scsi"]
+	url = korg:jejb/scsi.git
+	fetch = +refs/heads/for-next:refs/remotes/scsi/for-next
+	tagopt = --no-tags
+[remote "ext4"]
+	url = korg:tytso/ext4.git
+	fetch = +refs/heads/dev:refs/remotes/ext4/dev
+	tagopt = --no-tags
+[remote "security"]
+	url = korg:pcmoore/lsm.git
+	tagopt = --no-tags
+	fetch = +refs/heads/next:refs/remotes/security/next
+[remote "net-next"]
+	url = korg:netdev/net-next.git
+	tagopt = --no-tags
+	fetch = +refs/heads/main:refs/remotes/net-next/main
+[remote "vfs"]
+	url = korg:viro/vfs.git
+	fetch = +refs/heads/for-next:refs/remotes/vfs/for-next
+	tagopt = --no-tags
+[remote "crypto"]
+	url = korg:herbert/cryptodev-2.6.git
+	fetch = +refs/heads/master:refs/remotes/crypto/master
+	tagopt = --no-tags
+[remote "net"]
+	url = korg:netdev/net.git
+	tagopt = --no-tags
+	fetch = +refs/heads/main:refs/remotes/net/main
+[remote "sound"]
+	url = korg:tiwai/sound.git
+	fetch = +refs/heads/for-next:refs/remotes/sound/for-next
+	tagopt = --no-tags
+[remote "sound-current"]
+	url = korg:tiwai/sound.git
+	fetch = +refs/heads/for-linus:refs/remotes/sound-current/for-linus
+	tagopt = --no-tags
+[remote "arm"]
+	url = korg:rmk/linux.git
+	fetch = +refs/heads/for-next:refs/remotes/arm/for-next
+	tagopt = --no-tags
+[remote "arm-current"]
+	url = korg:rmk/linux.git
+	fetch = +refs/heads/fixes:refs/remotes/arm-current/fixes
+	tagopt = --no-tags
+[remote "pci"]
+	url = korg:pci/pci.git
+	fetch = +refs/heads/next:refs/remotes/pci/next
+	tagopt = --no-tags
+[remote "pci-current"]
+	url = korg:pci/pci.git
+	fetch = +refs/heads/for-linus:refs/remotes/pci-current/for-linus
+	tagopt = --no-tags
+[remote "cifs"]
+	url = git://git.samba.org/sfrench/cifs-2.6.git
+	fetch = +refs/heads/for-next:refs/remotes/cifs/for-next
+	tagopt = --no-tags
+[remote "gfs2"]
+	url = korg:gfs2/linux-gfs2.git
+	fetch = +refs/heads/for-next:refs/remotes/gfs2/for-next
+	tagopt = --no-tags
+[remote "input"]
+	url = korg:dtor/input.git
+	fetch = +refs/heads/next:refs/remotes/input/next
+	tagopt = --no-tags
+[remote "input-current"]
+	url = korg:dtor/input.git
+	fetch = +refs/heads/for-linus:refs/remotes/input-current/for-linus
+	tagopt = --no-tags
+[remote "ubifs"]
+	url = korg:rw/ubifs.git
+	fetch = +refs/heads/next:refs/remotes/ubifs/next
+	tagopt = --no-tags
+[remote "block"]
+	url = korg:axboe/linux.git
+	fetch = +refs/heads/for-next:refs/remotes/block/for-next
+	tagopt = --no-tags
+[remote "battery"]
+	url = korg:sre/linux-power-supply.git
+	fetch = +refs/heads/for-next:refs/remotes/battery/for-next
+	tagopt = --no-tags
+[remote "m68knommu"]
+	url = korg:gerg/m68knommu.git
+	fetch = +refs/heads/for-next:refs/remotes/m68knommu/for-next
+	tagopt = --no-tags
+[remote "mips"]
+	url = korg:mips/linux.git
+	tagopt = --no-tags
+	fetch = +refs/heads/mips-next:refs/remotes/mips/mips-next
+[remote "drm"]
+	url = gfo:drm/kernel.git
+	fetch = +refs/heads/drm-next:refs/remotes/drm/drm-next
+	tagopt = --no-tags
+[remote "regulator"]
+	url = korg:broonie/regulator.git
+	tagopt = --no-tags
+	fetch = +refs/heads/for-next:refs/remotes/regulator/for-next
+[remote "watchdog"]
+	url = git://www.linux-watchdog.org/linux-watchdog-next.git
+	fetch = +refs/heads/master:refs/remotes/watchdog/master
+	tagopt = --no-tags
+[remote "osd"]
+	url = git://git.open-osd.org/linux-open-osd.git
+	fetch = +refs/heads/linux-next:refs/remotes/osd/linux-next
+	tagopt = --no-tags
+[remote "m68k"]
+	url = korg:geert/linux-m68k.git
+	fetch = +refs/heads/for-next:refs/remotes/m68k/for-next
+	tagopt = --no-tags
+[remote "m68k-current"]
+	url = korg:geert/linux-m68k.git
+	fetch = +refs/heads/for-linus:refs/remotes/m68k-current/for-linus
+	tagopt = --no-tags
+[remote "fuse"]
+	url = korg:mszeredi/fuse.git
+	fetch = +refs/heads/for-next:refs/remotes/fuse/for-next
+	tagopt = --no-tags
+[remote "jc_docs"]
+	url = git://git.lwn.net/linux.git
+	fetch = +refs/heads/docs-next:refs/remotes/jc_docs/docs-next
+	tagopt = --no-tags
+[remote "audit"]
+	url = korg:pcmoore/audit.git
+	fetch = +refs/heads/next:refs/remotes/audit/next
+	tagopt = --no-tags
+[remote "crypto-current"]
+	url = korg:herbert/crypto-2.6.git
+	fetch = +refs/heads/master:refs/remotes/crypto-current/master
+	tagopt = --no-tags
+[remote "pm"]
+	url = korg:rafael/linux-pm.git
+	tagopt = --no-tags
+	fetch = +refs/heads/linux-next:refs/remotes/pm/linux-next
+[remote "bluetooth"]
+	url = korg:bluetooth/bluetooth-next.git
+	fetch = +refs/heads/master:refs/remotes/bluetooth/master
+	tagopt = --no-tags
+[remote "asm-generic"]
+	url = korg:arnd/asm-generic
+	fetch = +refs/heads/master:refs/remotes/asm-generic/master
+	tagopt = --no-tags
+[remote "microblaze"]
+	url = git://git.monstr.eu/linux-2.6-microblaze.git
+	fetch = +refs/heads/next:refs/remotes/microblaze/next
+	tagopt = --no-tags
+[remote "tip"]
+	url = korg:tip/tip.git
+	fetch = +refs/heads/master:refs/remotes/tip/master
+	tagopt = --no-tags
+[remote "percpu"]
+	url = korg:dennis/percpu.git
+	fetch = +refs/heads/for-next:refs/remotes/percpu/for-next
+	tagopt = --no-tags
+[remote "ext3"]
+	url = korg:jack/linux-fs.git
+	tagopt = --no-tags
+	fetch = +refs/heads/for_next:refs/remotes/ext3/for_next
+[remote "ecryptfs"]
+	url = korg:tyhicks/ecryptfs.git
+	fetch = +refs/heads/next:refs/remotes/ecryptfs/next
+	tagopt = --no-tags
+[remote "ceph"]
+	url = gh:ceph/ceph-client.git
+	tagopt = --no-tags
+	fetch = +refs/heads/master:refs/remotes/ceph/master
+[remote "workqueues"]
+	url = korg:tj/wq.git
+	fetch = +refs/heads/for-next:refs/remotes/workqueues/for-next
+	tagopt = --no-tags
+[remote "staging"]
+	url = korg:gregkh/staging.git
+	fetch = +refs/heads/staging-next:refs/remotes/staging/staging-next
+	tagopt = --no-tags
+[remote "drivers-x86"]
+	url = korg:pdx86/platform-drivers-x86.git
+	fetch = +refs/heads/for-next:refs/remotes/drivers-x86/for-next
+	tagopt = --no-tags
+[remote "tegra"]
+	url = korg:tegra/linux.git
+	fetch = +refs/heads/for-next:refs/remotes/tegra/for-next
+	tagopt = --no-tags
+[remote "sound-asoc"]
+	url = korg:broonie/sound.git
+	fetch = +refs/heads/for-next:refs/remotes/sound-asoc/for-next
+	tagopt = --no-tags
+[remote "paulmck"]
+	url = korg:paulmck/linux-rcu.git
+	fetch = +refs/heads/non-rcu/next:refs/remotes/paulmck/non-rcu/next
+	tagopt = --no-tags
+[remote "hwmon-staging"]
+	url = korg:groeck/linux-staging.git
+	fetch = +refs/heads/hwmon-next:refs/remotes/hwmon-staging/hwmon-next
+	tagopt = --no-tags
+[remote "usb.current"]
+	url = korg:gregkh/usb.git
+	fetch = +refs/heads/usb-linus:refs/remotes/usb.current/usb-linus
+	tagopt = --no-tags
+[remote "tty"]
+	url = korg:gregkh/tty.git
+	fetch = +refs/heads/tty-next:refs/remotes/tty/tty-next
+	tagopt = --no-tags
+[remote "tty.current"]
+	url = korg:gregkh/tty.git
+	fetch = +refs/heads/tty-linus:refs/remotes/tty.current/tty-linus
+	tagopt = --no-tags
+[remote "driver-core.current"]
+	url = korg:driver-core/driver-core.git
+	fetch = +refs/heads/driver-core-linus:refs/remotes/driver-core.current/driver-core-linus
+	tagopt = --no-tags
+[remote "driver-core"]
+	url = korg:driver-core/driver-core.git
+	fetch = +refs/heads/driver-core-next:refs/remotes/driver-core/driver-core-next
+	tagopt = --no-tags
+[remote "staging.current"]
+	url = korg:gregkh/staging.git
+	fetch = +refs/heads/staging-linus:refs/remotes/staging.current/staging-linus
+	tagopt = --no-tags
+[remote "selinux"]
+	url = korg:pcmoore/selinux.git
+	fetch = +refs/heads/next:refs/remotes/selinux/next
+	tagopt = --no-tags
+[remote "dmaengine-fixes"]
+	url = korg:vkoul/dmaengine.git
+	tagopt = --no-tags
+	fetch = +refs/heads/fixes:refs/remotes/dmaengine-fixes/fixes
+[remote "dmaengine"]
+	url = korg:vkoul/dmaengine.git
+	tagopt = --no-tags
+	fetch = +refs/heads/next:refs/remotes/dmaengine/next
+[remote "mtd"]
+	url = korg:mtd/linux.git
+	tagopt = --no-tags
+	fetch = +refs/heads/mtd/next:refs/remotes/mtd/mtd/next
+[remote "arm-soc"]
+	url = korg:soc/soc.git
+	fetch = +refs/heads/for-next:refs/remotes/arm-soc/for-next
+	tagopt = --no-tags
+[remote "regmap"]
+	url = korg:broonie/regmap.git
+	fetch = +refs/heads/for-next:refs/remotes/regmap/for-next
+	tagopt = --no-tags
+[remote "iommu"]
+	url = korg:iommu/linux.git
+	fetch = +refs/heads/next:refs/remotes/iommu/next
+	tagopt = --no-tags
+[remote "usb"]
+	url = korg:gregkh/usb.git
+	fetch = +refs/heads/usb-next:refs/remotes/usb/usb-next
+	tagopt = --no-tags
+[remote "pinctrl"]
+	url = korg:linusw/linux-pinctrl.git
+	fetch = +refs/heads/for-next:refs/remotes/pinctrl/for-next
+	tagopt = --no-tags
+[remote "char-misc.current"]
+	url = korg:gregkh/char-misc.git
+	fetch = +refs/heads/char-misc-linus:refs/remotes/char-misc.current/char-misc-linus
+	tagopt = --no-tags
+[remote "char-misc"]
+	url = korg:gregkh/char-misc.git
+	fetch = +refs/heads/char-misc-next:refs/remotes/char-misc/char-misc-next
+	tagopt = --no-tags
+[remote "arm-perf"]
+	url = korg:will/linux.git
+	fetch = +refs/heads/for-next/perf:refs/remotes/arm-perf/for-next/perf
+	tagopt = --no-tags
+[remote "cgroup"]
+	url = korg:tj/cgroup.git
+	fetch = +refs/heads/for-next:refs/remotes/cgroup/for-next
+	tagopt = --no-tags
+[remote "hsi"]
+	url = korg:sre/linux-hsi.git
+	fetch = +refs/heads/for-next:refs/remotes/hsi/for-next
+	tagopt = --no-tags
+[remote "vhost"]
+	url = korg:mst/vhost.git
+	fetch = +refs/heads/linux-next:refs/remotes/vhost/linux-next
+	tagopt = --no-tags
+[remote "ktest"]
+	url = korg:rostedt/linux-ktest.git
+	fetch = +refs/heads/for-next:refs/remotes/ktest/for-next
+	tagopt = --no-tags
+[remote "i2c"]
+	url = korg:wsa/linux.git
+	tagopt = --no-tags
+	fetch = +refs/heads/i2c/for-next:refs/remotes/i2c/i2c/for-next
+[remote "vfio"]
+	url = gh:awilliam/linux-vfio.git
+	fetch = +refs/heads/next:refs/remotes/vfio/next
+	tagopt = --no-tags
+[remote "pwm"]
+	url = korg:ukleinek/linux.git
+	fetch = +refs/heads/pwm/for-next:refs/remotes/pwm/pwm/for-next
+	tagopt = --no-tags
+[remote "clk"]
+	url = korg:clk/linux.git
+	fetch = +refs/heads/clk-next:refs/remotes/clk/clk-next
+	tagopt = --no-tags
+[remote "devicetree"]
+	url = korg:robh/linux.git
+	tagopt = --no-tags
+	fetch = +refs/heads/for-next:refs/remotes/devicetree/for-next
+[remote "spi"]
+	url = korg:broonie/spi.git
+	tagopt = --no-tags
+	fetch = +refs/heads/for-next:refs/remotes/spi/for-next
+[remote "xtensa"]
+	url = gh:jcmvbkbc/linux-xtensa.git
+	fetch = +refs/heads/xtensa-for-next:refs/remotes/xtensa/xtensa-for-next
+	tagopt = --no-tags
+[remote "arm64"]
+	url = korg:arm64/linux
+	fetch = +refs/heads/for-next/core:refs/remotes/arm64/for-next/core
+	tagopt = --no-tags
+[remote "ftrace"]
+	url = korg:trace/linux-trace.git
+	fetch = +refs/heads/for-next:refs/remotes/ftrace/for-next
+	tagopt = --no-tags
+[remote "f2fs"]
+	url = korg:jaegeuk/f2fs.git
+	fetch = +refs/heads/dev:refs/remotes/f2fs/dev
+	tagopt = --no-tags
+[remote "ipsec"]
+	url = korg:klassert/ipsec.git
+	fetch = +refs/heads/master:refs/remotes/ipsec/master
+	tagopt = --no-tags
+[remote "ipsec-next"]
+	url = korg:klassert/ipsec-next.git
+	fetch = +refs/heads/master:refs/remotes/ipsec-next/master
+	tagopt = --no-tags
+[remote "drm-intel"]
+	url = gfo:drm/i915/kernel.git
+	fetch = +refs/heads/for-linux-next:refs/remotes/drm-intel/for-linux-next
+	tagopt = --no-tags
+[remote "arc-current"]
+	url = korg:vgupta/arc.git
+	fetch = +refs/heads/for-curr:refs/remotes/arc-current/for-curr
+	tagopt = --no-tags
+[remote "vfio-fixes"]
+	url = gh:awilliam/linux-vfio.git
+	fetch = +refs/heads/for-linus:refs/remotes/vfio-fixes/for-linus
+	tagopt = --no-tags
+[remote "imx-mxs"]
+	url = korg:frank.li/linux.git
+	fetch = +refs/heads/for-next:refs/remotes/imx-mxs/for-next
+	tagopt = --no-tags
+[remote "kvm-arm"]
+	url = korg:kvmarm/kvmarm.git
+	fetch = +refs/heads/next:refs/remotes/kvm-arm/next
+	tagopt = --no-tags
+[remote "kvm-arm-fixes"]
+	url = korg:kvmarm/kvmarm.git
+	fetch = +refs/heads/fixes:refs/remotes/kvm-arm-fixes/fixes
+	tagopt = --no-tags
+[remote "parisc-hd"]
+	url = korg:deller/parisc-linux.git
+	fetch = +refs/heads/for-next:refs/remotes/parisc-hd/for-next
+	tagopt = --no-tags
+[remote "mvebu"]
+	url = korg:gclement/mvebu.git
+	fetch = +refs/heads/for-next:refs/remotes/mvebu/for-next
+	tagopt = --no-tags
+[remote "drm-intel-fixes"]
+	url = gfo:drm/i915/kernel.git
+	fetch = +refs/heads/for-linux-next-fixes:refs/remotes/drm-intel-fixes/for-linux-next-fixes
+	tagopt = --no-tags
+[remote "xen-tip"]
+	url = korg:xen/tip.git
+	fetch = +refs/heads/linux-next:refs/remotes/xen-tip/linux-next
+	tagopt = --no-tags
+[remote "mfd"]
+	url = korg:lee/mfd.git
+	tagopt = --no-tags
+	fetch = +refs/heads/for-mfd-next:refs/remotes/mfd/for-mfd-next
+[remote "mfd-fixes"]
+	url = korg:lee/mfd.git
+	tagopt = --no-tags
+	fetch = +refs/heads/for-mfd-fixes:refs/remotes/mfd-fixes/for-mfd-fixes
+[remote "device-mapper"]
+	url = korg:device-mapper/linux-dm.git
+	fetch = +refs/heads/for-next:refs/remotes/device-mapper/for-next
+	tagopt = --no-tags
+[remote "chrome-platform"]
+	url = korg:chrome-platform/linux.git
+	fetch = +refs/heads/for-next:refs/remotes/chrome-platform/for-next
+	tagopt = --no-tags
+[remote "clockevents"]
+	url = korg:daniel.lezcano/linux.git
+	fetch = +refs/heads/timers/drivers/next:refs/remotes/clockevents/timers/drivers/next
+	tagopt = --no-tags
+[remote "mmc"]
+	url = korg:ulfh/mmc.git
+	fetch = +refs/heads/next:refs/remotes/mmc/next
+	tagopt = --no-tags
+[remote "integrity"]
+	url = korg:zohar/linux-integrity
+	fetch = +refs/heads/next-integrity:refs/remotes/integrity/next-integrity
+	tagopt = --no-tags
+[remote "usb-serial-fixes"]
+	url = korg:johan/usb-serial.git
+	fetch = +refs/heads/usb-linus:refs/remotes/usb-serial-fixes/usb-linus
+	tagopt = --no-tags
+[remote "usb-serial"]
+	url = korg:johan/usb-serial.git
+	fetch = +refs/heads/usb-next:refs/remotes/usb-serial/usb-next
+	tagopt = --no-tags
+[remote "backlight"]
+	url = korg:lee/backlight.git
+	fetch = +refs/heads/for-backlight-next:refs/remotes/backlight/for-backlight-next
+	tagopt = --no-tags
+[remote "backlight-fixes"]
+	url = korg:lee/backlight.git
+	fetch = +refs/heads/for-backlight-fixes:refs/remotes/backlight-fixes/for-backlight-fixes
+	tagopt = --no-tags
+[remote "kselftest-fixes"]
+	url = korg:shuah/linux-kselftest.git
+	fetch = +refs/heads/fixes:refs/remotes/kselftest-fixes/fixes
+	tagopt = --no-tags
+[remote "kselftest"]
+	url = korg:shuah/linux-kselftest.git
+	fetch = +refs/heads/next:refs/remotes/kselftest/next
+	tagopt = --no-tags
+[remote "ipmi"]
+	url = gh:cminyard/linux-ipmi.git
+	fetch = +refs/heads/for-next:refs/remotes/ipmi/for-next
+	tagopt = --no-tags
+[remote "mailbox"]
+	url = korg:jassibrar/mailbox.git
+	fetch = +refs/heads/for-next:refs/remotes/mailbox/for-next
+	tagopt = --no-tags
+[remote "drm-misc"]
+	url = gfo:drm/misc/kernel.git
+	fetch = +refs/heads/for-linux-next:refs/remotes/drm-misc/for-linux-next
+	tagopt = --no-tags
+[remote "overlayfs"]
+	url = korg:overlayfs/vfs.git
+	fetch = +refs/heads/overlayfs-next:refs/remotes/overlayfs/overlayfs-next
+	tagopt = --no-tags
+[remote "omap"]
+	url = korg:khilman/linux-omap.git
+	fetch = +refs/heads/for-next:refs/remotes/omap/for-next
+	tagopt = --no-tags
+[remote "livepatching"]
+	url = korg:livepatching/livepatching.git
+	fetch = +refs/heads/for-next:refs/remotes/livepatching/for-next
+	tagopt = --no-tags
+[remote "kvms390"]
+	url = korg:kvms390/linux.git
+	fetch = +refs/heads/next:refs/remotes/kvms390/next
+	tagopt = --no-tags
+[remote "extcon"]
+	url = korg:chanwoo/extcon.git
+	fetch = +refs/heads/extcon-next:refs/remotes/extcon/extcon-next
+	tagopt = --no-tags
+[remote "kdbus"]
+	url = korg:gregkh/char-misc.git/
+	fetch = +refs/heads/kdbus:refs/remotes/kdbus/kdbus
+	tagopt = --no-tags
+[remote "uml"]
+	url = korg:uml/linux.git
+	fetch = +refs/heads/next:refs/remotes/uml/next
+	tagopt = --no-tags
+[remote "at91"]
+	url = korg:at91/linux.git
+	fetch = +refs/heads/at91-next:refs/remotes/at91/at91-next
+	tagopt = --no-tags
+[remote "drm-msm"]
+	url = gfo:drm/msm.git
+	fetch = +refs/heads/msm-next:refs/remotes/drm-msm/msm-next
+	tagopt = --no-tags
+[remote "coresight"]
+	url = korg:coresight/linux.git
+	fetch = +refs/heads/next:refs/remotes/coresight/next
+	tagopt = --no-tags
+[remote "rtc"]
+	url = korg:abelloni/linux.git
+	fetch = +refs/heads/rtc-next:refs/remotes/rtc/rtc-next
+	tagopt = --no-tags
+[remote "rdma-fixes"]
+	url = korg:rdma/rdma.git
+	fetch = +refs/heads/for-rc:refs/remotes/rdma-fixes/for-rc
+	tagopt = --no-tags
+[remote "rdma"]
+	url = korg:rdma/rdma.git
+	fetch = +refs/heads/for-next:refs/remotes/rdma/for-next
+	tagopt = --no-tags
+[remote "nvdimm"]
+	url = korg:nvdimm/nvdimm.git
+	fetch = +refs/heads/libnvdimm-for-next:refs/remotes/nvdimm/libnvdimm-for-next
+	tagopt = --no-tags
+[remote "powerpc-fixes"]
+	url = korg:powerpc/linux.git
+	tagopt = --no-tags
+	fetch = +refs/heads/fixes:refs/remotes/powerpc-fixes/fixes
+[remote "powerpc"]
+	url = korg:powerpc/linux.git
+	fetch = +refs/heads/next:refs/remotes/powerpc/next
+	tagopt = --no-tags
+[remote "samsung-krzk"]
+	url = korg:krzk/linux.git
+	fetch = +refs/heads/for-next:refs/remotes/samsung-krzk/for-next
+	tagopt = --no-tags
+[remote "orangefs"]
+	url = korg:hubcap/linux.git
+	fetch = +refs/heads/for-next:refs/remotes/orangefs/for-next
+	tagopt = --no-tags
+[remote "qcom"]
+	url = korg:qcom/linux.git
+	fetch = +refs/heads/for-next:refs/remotes/qcom/for-next
+	tagopt = --no-tags
+[remote "rockchip"]
+	url = korg:mmind/linux-rockchip.git
+	fetch = +refs/heads/for-next:refs/remotes/rockchip/for-next
+	tagopt = --no-tags
+[remote "ipvs"]
+	url = korg:horms/ipvs.git
+	fetch = +refs/heads/main:refs/remotes/ipvs/main
+	tagopt = --no-tags
+[remote "ipvs-next"]
+	url = korg:horms/ipvs-next.git
+	fetch = +refs/heads/main:refs/remotes/ipvs-next/main
+	tagopt = --no-tags
+[remote "configfs"]
+	url = korg:a.hindborg/linux.git
+	fetch = +refs/heads/configfs-next:refs/remotes/configfs/configfs-next
+	tagopt = --no-tags
+[remote "btrfs"]
+	url = korg:kdave/linux.git
+	tagopt = --no-tags
+	fetch = +refs/heads/for-next:refs/remotes/btrfs/for-next
+[remote "tpmdd-tpm"]
+	url = korg:jarkko/linux-tpmdd.git
+	fetch = +refs/heads/for-next-tpm:refs/remotes/tpmdd-tpm/for-next-tpm
+	tagopt = --no-tags
+[remote "tpmdd-keys"]
+	url = korg:jarkko/linux-tpmdd.git
+	fetch = +refs/heads/for-next-keys:refs/remotes/tpmdd-keys/for-next-keys
+	tagopt = --no-tags
+[remote "rpmsg"]
+	url = korg:remoteproc/linux.git
+	fetch = +refs/heads/for-next:refs/remotes/rpmsg/for-next
+	tagopt = --no-tags
+[remote "nand"]
+	url = korg:mtd/linux.git
+	fetch = +refs/heads/nand/next:refs/remotes/nand/nand/next
+	tagopt = --no-tags
+[remote "pstore"]
+	url = korg:kees/linux.git
+	fetch = +refs/heads/for-next/pstore:refs/remotes/pstore/for-next/pstore
+	tagopt = --no-tags
+[remote "amlogic"]
+	url = korg:amlogic/linux.git
+	tagopt = --no-tags
+	fetch = +refs/heads/for-next:refs/remotes/amlogic/for-next
+[remote "kspp"]
+	url = korg:kees/linux.git
+	fetch = +refs/heads/for-next/kspp:refs/remotes/kspp/for-next/kspp
+	tagopt = --no-tags
+[remote "netfilter"]
+	url = korg:netfilter/nf.git
+	fetch = +refs/heads/main:refs/remotes/netfilter/main
+	tagOpt = --no-tags
+[remote "netfilter-next"]
+	url = korg:netfilter/nf-next.git
+	fetch = +refs/heads/main:refs/remotes/netfilter-next/main
+	tagOpt = --no-tags
+[remote "phy"]
+	url = korg:phy/linux-phy.git
+	fetch = +refs/heads/fixes:refs/remotes/phy/fixes
+	tagopt = --no-tags
+[remote "phy-next"]
+	url = korg:phy/linux-phy.git
+	fetch = +refs/heads/next:refs/remotes/phy-next/next
+	tagopt = --no-tags
+[format]
+	outputDirectory = ../patches
+[remote "scsi-mkp"]
+	url = korg:mkp/scsi.git
+	fetch = +refs/heads/for-next:refs/remotes/scsi-mkp/for-next
+	tagopt = --no-tags
+[remote "modules"]
+	url = korg:modules/linux.git
+	fetch = +refs/heads/modules-next:refs/remotes/modules/modules-next
+	tagopt = --no-tags
+[remote "drm-misc-fixes"]
+	url = gfo:drm/misc/kernel.git
+	fetch = +refs/heads/for-linux-next-fixes:refs/remotes/drm-misc-fixes/for-linux-next-fixes
+	tagopt = --no-tags
+[remote "openrisc"]
+	url = gh:openrisc/linux.git
+	fetch = +refs/heads/for-next:refs/remotes/openrisc/for-next
+	tagopt = --no-tags
+[remote "fscrypt"]
+	url = korgfs:fscrypt/linux.git
+	fetch = +refs/heads/for-next:refs/remotes/fscrypt/for-next
+	tagopt = --no-tags
+[remote "fscrypt-current"]
+	url = korgfs:fscrypt/linux.git
+	fetch = +refs/heads/for-current:refs/remotes/fscrypt-current/for-current
+	tagopt = --no-tags
+[remote "printk"]
+	url = korg:printk/linux.git
+	fetch = +refs/heads/for-next:refs/remotes/printk/for-next
+	tagopt = --no-tags
+[remote "spi-nor"]
+	url = korg:mtd/linux.git
+	fetch = +refs/heads/spi-nor/next:refs/remotes/spi-nor/spi-nor/next
+	tagopt = --no-tags
+[remote "v4l-dvb-fixes"]
+	url = git://linuxtv.org/media-ci/media-pending.git
+	fetch = +refs/heads/fixes:refs/remotes/v4l-dvb-fixes/fixes
+	tagopt = --no-tags
+[remote "mux"]
+	url = https://gitlab.com/peda-linux/mux.git
+	fetch = +refs/heads/for-next:refs/remotes/mux/for-next
+	tagopt = --no-tags
+[remote "pinctrl-samsung"]
+	url = korg:pinctrl/samsung.git
+	fetch = +refs/heads/for-next:refs/remotes/pinctrl-samsung/for-next
+	tagopt = --no-tags
+[remote "sunxi"]
+	url = korg:sunxi/linux.git
+	fetch = +refs/heads/sunxi/for-next:refs/remotes/sunxi/sunxi/for-next
+	tagopt = --no-tags
+[remote "etnaviv"]
+	url = https://git.pengutronix.de/git/lst/linux
+	fetch = +refs/heads/etnaviv/next:refs/remotes/etnaviv/etnaviv/next
+	tagopt = --no-tags
+[remote "reset-fixes"]
+	url = https://git.pengutronix.de/git/pza/linux
+	fetch = +refs/heads/reset/fixes:refs/remotes/reset-fixes/reset/fixes
+	tagopt = --no-tags
+[remote "reset"]
+	url = https://git.pengutronix.de/git/pza/linux
+	fetch = +refs/heads/reset/next:refs/remotes/reset/reset/next
+	tagopt = --no-tags
+[remote "dma-mapping"]
+	url = korg:mszyprowski/linux.git
+	fetch = +refs/heads/dma-mapping-for-next:refs/remotes/dma-mapping/dma-mapping-for-next
+	tagopt = --no-tags
+[remote "risc-v"]
+	url = korg:riscv/linux.git
+	fetch = +refs/heads/for-next:refs/remotes/risc-v/for-next
+	tagopt = --no-tags
+[remote "mips-fixes"]
+	url = korg:mips/linux.git
+	fetch = +refs/heads/mips-fixes:refs/remotes/mips-fixes/mips-fixes
+	tagopt = --no-tags
+[remote "opp"]
+	url = korg:vireshk/pm.git
+	fetch = +refs/heads/opp/linux-next:refs/remotes/opp/opp/linux-next
+	tagopt = --no-tags
+[remote "cpupower"]
+	url = korg:shuah/linux.git
+	fetch = +refs/heads/cpupower:refs/remotes/cpupower/cpupower
+	tagopt = --no-tags
+[remote "ntb"]
+	url = gh:jonmason/ntb.git
+	fetch = +refs/heads/ntb-next:refs/remotes/ntb/ntb-next
+	tagopt = --no-tags
+[remote "at24"]
+	url = korg:brgl/linux.git
+	fetch = +refs/heads/at24/for-next:refs/remotes/at24/at24/for-next
+	tagopt = --no-tags
+[remote "bpf"]
+	url = korg:bpf/bpf.git/
+	fetch = +refs/heads/master:refs/remotes/bpf/master
+	tagopt = --no-tags
+[remote "bpf-next"]
+	url = korg:bpf/bpf-next.git
+	fetch = +refs/heads/for-next:refs/remotes/bpf-next/for-next
+	tagopt = --no-tags
+[remote "nfs-anna"]
+	url = git://git.linux-nfs.org/projects/anna/linux-nfs.git
+	fetch = +refs/heads/linux-next:refs/remotes/nfs-anna/linux-next
+	tagopt = --no-tags
+[remote "kvms390-fixes"]
+	url = korg:kvms390/linux.git
+	fetch = +refs/heads/master:refs/remotes/kvms390-fixes/master
+	tagopt = --no-tags
+[remote "arm64-fixes"]
+	url = korg:arm64/linux
+	fetch = +refs/heads/for-next/fixes:refs/remotes/arm64-fixes/for-next/fixes
+	tagopt = --no-tags
+[remote "apparmor"]
+	url = korg:jj/linux-apparmor
+	fetch = +refs/heads/apparmor-next:refs/remotes/apparmor/apparmor-next
+	tagopt = --no-tags
+[remote "mediatek"]
+	url = korg:mediatek/linux.git
+	fetch = +refs/heads/for-next:refs/remotes/mediatek/for-next
+	tagopt = --no-tags
+[remote "hwmon-fixes"]
+	url = korg:groeck/linux-staging.git
+	fetch = +refs/heads/hwmon:refs/remotes/hwmon-fixes/hwmon
+	tagopt = --no-tags
+[remote "nvdimm-fixes"]
+	url = korg:nvdimm/nvdimm.git
+	fetch = +refs/heads/libnvdimm-fixes:refs/remotes/nvdimm-fixes/libnvdimm-fixes
+	tagopt = --no-tags
+[remote "mtd-fixes"]
+	url = korg:mtd/linux.git
+	fetch = +refs/heads/mtd/fixes:refs/remotes/mtd-fixes/mtd/fixes
+	tagopt = --no-tags
+[remote "sound-asoc-fixes"]
+	url = korg:broonie/sound.git
+	fetch = +refs/heads/for-linus:refs/remotes/sound-asoc-fixes/for-linus
+	tagopt = --no-tags
+[remote "spi-fixes"]
+	url = korg:broonie/spi.git
+	fetch = +refs/heads/for-linus:refs/remotes/spi-fixes/for-linus
+	tagopt = --no-tags
+[remote "regmap-fixes"]
+	url = korg:broonie/regmap.git
+	fetch = +refs/heads/for-linus:refs/remotes/regmap-fixes/for-linus
+	tagopt = --no-tags
+[remote "regulator-fixes"]
+	url = korg:broonie/regulator.git
+	fetch = +refs/heads/for-linus:refs/remotes/regulator-fixes/for-linus
+	tagopt = --no-tags
+[remote "omap-fixes"]
+	url = korg:khilman/linux-omap.git
+	fetch = +refs/heads/fixes:refs/remotes/omap-fixes/fixes
+	tagopt = --no-tags
+[remote "btrfs-fixes"]
+	url = korg:kdave/linux.git
+	tagopt = --no-tags
+	fetch = +refs/heads/next-fixes:refs/remotes/btrfs-fixes/next-fixes
+[remote "vfs-fixes"]
+	url = korg:viro/vfs.git
+	fetch = +refs/heads/fixes:refs/remotes/vfs-fixes/fixes
+	tagopt = --no-tags
+[remote "dma-mapping-fixes"]
+	url = korg:mszyprowski/linux.git
+	fetch = +refs/heads/dma-mapping-fixes:refs/remotes/dma-mapping-fixes/dma-mapping-fixes
+	tagopt = --no-tags
+[remote "drivers-x86-fixes"]
+	url = korg:pdx86/platform-drivers-x86.git
+	fetch = +refs/heads/fixes:refs/remotes/drivers-x86-fixes/fixes
+	tagopt = --no-tags
+[remote "mmc-fixes"]
+	url = korg:ulfh/mmc.git
+	fetch = +refs/heads/fixes:refs/remotes/mmc-fixes/fixes
+	tagopt = --no-tags
+[remote "rtc-fixes"]
+	url = korg:abelloni/linux.git
+	fetch = +refs/heads/rtc-fixes:refs/remotes/rtc-fixes/rtc-fixes
+	tagopt = --no-tags
+[remote "samsung-krzk-fixes"]
+	url = korg:krzk/linux.git
+	fetch = +refs/heads/fixes:refs/remotes/samsung-krzk-fixes/fixes
+	tagopt = --no-tags
+[remote "pinctrl-samsung-fixes"]
+	url = korg:pinctrl/samsung.git
+	fetch = +refs/heads/fixes:refs/remotes/pinctrl-samsung-fixes/fixes
+	tagopt = --no-tags
+[remote "devicetree-fixes"]
+	url = korg:robh/linux.git
+	fetch = +refs/heads/dt/linus:refs/remotes/devicetree-fixes/dt/linus
+	tagopt = --no-tags
+[remote "scsi-fixes"]
+	url = korg:mkp/scsi.git
+	fetch = +refs/heads/fixes:refs/remotes/scsi-fixes/fixes
+	tagopt = --no-tags
+[remote "xarray"]
+	url = git://git.infradead.org/users/willy/xarray.git
+	fetch = +refs/heads/main:refs/remotes/xarray/main
+	tagopt = --no-tags
+[remote "mlx5-next"]
+	url = korg:mellanox/linux.git
+	fetch = +refs/heads/mlx5-next:refs/remotes/mlx5-next/mlx5-next
+	tagopt = --no-tags
+[remote "drm-fixes"]
+	url = gfo:drm/kernel.git
+	fetch = +refs/heads/drm-fixes:refs/remotes/drm-fixes/drm-fixes
+	tagopt = --no-tags
+[remote "v9fs"]
+	url = gh:martinetd/linux
+	fetch = +refs/heads/9p-next:refs/remotes/v9fs/9p-next
+	tagopt = --no-tags
+[remote "at91-fixes"]
+	url = korg:at91/linux.git
+	fetch = +refs/heads/at91-fixes:refs/remotes/at91-fixes/at91-fixes
+	tagopt = --no-tags
+[remote "soundwire-fixes"]
+	url = korg:vkoul/soundwire.git
+	fetch = +refs/heads/fixes:refs/remotes/soundwire-fixes/fixes
+	tagopt = --no-tags
+[remote "soundwire"]
+	url = korg:vkoul/soundwire.git
+	fetch = +refs/heads/next:refs/remotes/soundwire/next
+	tagopt = --no-tags
+[remote "icc"]
+	url = korg:djakov/icc.git
+	fetch = +refs/heads/icc-next:refs/remotes/icc/icc-next
+	tagopt = --no-tags
+[remote "csky"]
+	url = gh:c-sky/csky-linux.git
+	tagopt = --no-tags
+	fetch = +refs/heads/linux-next:refs/remotes/csky/linux-next
+[remote "compiler-attributes"]
+	url = gh:ojeda/linux.git
+	fetch = +refs/heads/compiler-attributes:refs/remotes/compiler-attributes/compiler-attributes
+	tagopt = --no-tags
+[remote "i3c"]
+	url = korg:i3c/linux.git
+	fetch = +refs/heads/i3c/next:refs/remotes/i3c/i3c/next
+	tagopt = --no-tags
+[remote "slimbus"]
+	url = korg:srini/slimbus.git
+	fetch = +refs/heads/for-next:refs/remotes/slimbus/for-next
+	tagopt = --no-tags
+[remote "nvmem"]
+	url = korg:srini/nvmem.git
+	fetch = +refs/heads/for-next:refs/remotes/nvmem/for-next
+	tagopt = --no-tags
+[remote "gnss-fixes"]
+	url = korg:johan/gnss.git
+	fetch = +refs/heads/gnss-linus:refs/remotes/gnss-fixes/gnss-linus
+	tagopt = --no-tags
+[remote "gnss"]
+	url = korg:johan/gnss.git
+	fetch = +refs/heads/gnss-next:refs/remotes/gnss/gnss-next
+	tagopt = --no-tags
+[remote "thunderbolt"]
+	url = korg:westeri/thunderbolt.git
+	fetch = +refs/heads/next:refs/remotes/thunderbolt/next
+	tagopt = --no-tags
+[remote "thunderbolt-fixes"]
+	url = korg:westeri/thunderbolt.git
+	fetch = +refs/heads/fixes:refs/remotes/thunderbolt-fixes/fixes
+	tagopt = --no-tags
+[remote "hyperv"]
+	url = korg:hyperv/linux.git
+	fetch = +refs/heads/hyperv-next:refs/remotes/hyperv/hyperv-next
+	tagopt = --no-tags
+[remote "hyperv-fixes"]
+	url = korg:hyperv/linux.git
+	fetch = +refs/heads/hyperv-fixes:refs/remotes/hyperv-fixes/hyperv-fixes
+	tagopt = --no-tags
+[remote "kgdb"]
+	url = korg:danielt/linux.git
+	tagopt = --no-tags
+	fetch = +refs/heads/kgdb/for-next:refs/remotes/kgdb/kgdb/for-next
+[remote "gpio-brgl"]
+	url = korg:brgl/linux.git
+	fetch = +refs/heads/gpio/for-next:refs/remotes/gpio-brgl/gpio/for-next
+	tagopt = --no-tags
+[remote "cpufreq-arm"]
+	url = korg:vireshk/pm.git
+	fetch = +refs/heads/cpufreq/arm/linux-next:refs/remotes/cpufreq-arm/cpufreq/arm/linux-next
+	tagopt = --no-tags
+[remote "devfreq"]
+	url = korg:chanwoo/linux.git
+	tagopt = --no-tags
+	fetch = +refs/heads/devfreq-next:refs/remotes/devfreq/devfreq-next
+[remote "amdgpu"]
+	url = gfo:agd5f/linux.git
+	fetch = +refs/heads/drm-next:refs/remotes/amdgpu/drm-next
+	tagopt = --no-tags
+[remote "s390-fixes"]
+	url = korg:s390/linux.git
+	fetch = +refs/heads/fixes:refs/remotes/s390-fixes/fixes
+	tagopt = --no-tags
+[remote "risc-v-fixes"]
+	url = korg:riscv/linux.git
+	fetch = +refs/heads/fixes:refs/remotes/risc-v-fixes/fixes
+	tagopt = --no-tags
+[remote "hmm"]
+	url = korg:rdma/rdma.git
+	fetch = +refs/heads/hmm:refs/remotes/hmm/hmm
+	tagopt = --no-tags
+[remote "scmi"]
+	url = korg:sudeep.holla/linux.git
+	fetch = +refs/heads/for-linux-next:refs/remotes/scmi/for-linux-next
+	tagopt = --no-tags
+[remote "arm-soc-fixes"]
+	url = korg:soc/soc.git
+	fetch = +refs/heads/arm/fixes:refs/remotes/arm-soc-fixes/arm/fixes
+	tagopt = --no-tags
+[remote "fpga"]
+	url = korg:fpga/linux-fpga.git
+	fetch = +refs/heads/for-next:refs/remotes/fpga/for-next
+	tagopt = --no-tags
+[remote "edac"]
+	url = korg:ras/ras.git
+	fetch = +refs/heads/edac-for-next:refs/remotes/edac/edac-for-next
+	tagopt = --no-tags
+[remote "fsverity"]
+	url = korgfs:fsverity/linux.git
+	fetch = +refs/heads/for-next:refs/remotes/fsverity/for-next
+	tagopt = --no-tags
+[remote "fsverity-current"]
+	url = korgfs:fsverity/linux.git
+	fetch = +refs/heads/for-current:refs/remotes/fsverity-current/for-current
+	tagOpt = --no-tags
+[remote "fpga-fixes"]
+	url = korg:fpga/linux-fpga.git
+	fetch = +refs/heads/fixes:refs/remotes/fpga-fixes/fixes
+	tagopt = --no-tags
+[remote "renesas"]
+	url = korg:geert/renesas-devel.git
+	tagopt = --no-tags
+	fetch = +refs/heads/next:refs/remotes/renesas/next
+[log]
+	mailmap = true
+[remote "spdx"]
+	url = korg:gregkh/spdx.git
+	fetch = +refs/heads/spdx-linus:refs/remotes/spdx/spdx-linus
+	tagopt = --no-tags
+[remote "gpio-intel-fixes"]
+	url = korg:andy/linux-gpio-intel.git
+	fetch = +refs/heads/fixes:refs/remotes/gpio-intel-fixes/fixes
+	tagopt = --no-tags
+[remote "gpio-intel"]
+	url = korg:andy/linux-gpio-intel.git
+	fetch = +refs/heads/for-next:refs/remotes/gpio-intel/for-next
+	tagopt = --no-tags
+[remote "pinctrl-intel-fixes"]
+	url = korg:pinctrl/intel.git
+	fetch = +refs/heads/fixes:refs/remotes/pinctrl-intel-fixes/fixes
+	tagopt = --no-tags
+[remote "pinctrl-intel"]
+	url = korg:pinctrl/intel.git
+	fetch = +refs/heads/for-next:refs/remotes/pinctrl-intel/for-next
+	tagopt = --no-tags
+[remote "erofs-fixes"]
+	url = korg:xiang/erofs.git
+	tagopt = --no-tags
+	fetch = +refs/heads/fixes:refs/remotes/erofs-fixes/fixes
+[remote "erofs"]
+	url = korg:xiang/erofs.git
+	fetch = +refs/heads/dev:refs/remotes/erofs/dev
+	tagopt = --no-tags
+[remote "kunit"]
+	url = korg:shuah/linux-kselftest.git
+	fetch = +refs/heads/test:refs/remotes/kunit/test
+	tagopt = --no-tags
+[remote "tomoyo"]
+	url = git://git.code.sf.net/p/tomoyo/tomoyo.git
+	fetch = +refs/heads/master:refs/remotes/tomoyo/master
+	tagopt = --no-tags
+[remote "thermal"]
+	url = korg:thermal/linux.git
+	fetch = +refs/heads/thermal/linux-next:refs/remotes/thermal/thermal/linux-next
+	tagopt = --no-tags
+[remote "nfsd"]
+	url = korg:cel/linux
+	fetch = +refs/heads/nfsd-next:refs/remotes/nfsd/nfsd-next
+	tagopt = --no-tags
+[remote "pcmcia"]
+	url = korg:brodo/linux.git
+	fetch = +refs/heads/pcmcia-next:refs/remotes/pcmcia/pcmcia-next
+	tagopt = --no-tags
+[remote "kunit-next"]
+	url = korg:shuah/linux-kselftest.git
+	fetch = +refs/heads/kunit:refs/remotes/kunit-next/kunit
+	tagopt = --no-tags
+[remote "zonefs"]
+	url = korg:dlemoal/zonefs.git
+	fetch = +refs/heads/for-next:refs/remotes/zonefs/for-next
+	tagopt = --no-tags
+[remote "cfi"]
+	url = korg:mtd/linux.git
+	fetch = +refs/heads/cfi/next:refs/remotes/cfi/cfi/next
+	tagOpt = --no-tags
+[remote "mhi"]
+	url = korg:mani/mhi.git
+	fetch = +refs/heads/mhi-next:refs/remotes/mhi/mhi-next
+	tagopt = --no-tags
+[remote "exfat"]
+	url = korg:linkinjeon/exfat.git
+	fetch = +refs/heads/dev:refs/remotes/exfat/dev
+	tagopt = --no-tags
+[remote "smack"]
+	url = gh:cschaufler/smack-next
+	fetch = +refs/heads/next:refs/remotes/smack/next
+	tagopt = --no-tags
+[remote "seccomp"]
+	url = korg:kees/linux.git
+	fetch = +refs/heads/for-next/seccomp:refs/remotes/seccomp/for-next/seccomp
+	tagopt = --no-tags
+[remote "kunit-fixes"]
+	url = korg:shuah/linux-kselftest.git
+	fetch = +refs/heads/kunit-fixes:refs/remotes/kunit-fixes/kunit-fixes
+	tagopt = --no-tags
+[remote "memblock"]
+	url = korg:rppt/memblock.git
+	tagopt = --no-tags
+	fetch = +refs/heads/for-next:refs/remotes/memblock/for-next
+[remote "memblock-fixes"]
+	url = korg:rppt/memblock.git
+	tagopt = --no-tags
+	fetch = +refs/heads/fixes:refs/remotes/memblock-fixes/fixes
+[remote "dmi"]
+	url = korg:jdelvare/staging.git
+	tagopt = --no-tags
+	fetch = +refs/heads/dmi-for-next:refs/remotes/dmi/dmi-for-next
+[remote "drivers-memory"]
+	url = korg:krzk/linux-mem-ctrl.git
+	fetch = +refs/heads/for-next:refs/remotes/drivers-memory/for-next
+	tagopt = --no-tags
+[remote "drivers-memory-fixes"]
+	url = korg:krzk/linux-mem-ctrl.git
+	fetch = +refs/heads/fixes:refs/remotes/drivers-memory-fixes/fixes
+	tagopt = --no-tags
+[remote "stm32"]
+	url = korg:atorgue/stm32.git
+	fetch = +refs/heads/stm32-next:refs/remotes/stm32/stm32-next
+	tagopt = --no-tags
+[remote "clk-renesas"]
+	url = korg:geert/renesas-drivers.git
+	fetch = +refs/heads/renesas-clk:refs/remotes/clk-renesas/renesas-clk
+	tagopt = --no-tags
+[remote "pinctrl-renesas"]
+	url = korg:geert/renesas-drivers.git
+	fetch = +refs/heads/renesas-pinctrl:refs/remotes/pinctrl-renesas/renesas-pinctrl
+	tagopt = --no-tags
+[remote "gpio-brgl-fixes"]
+	url = korg:brgl/linux.git
+	fetch = +refs/heads/gpio/for-current:refs/remotes/gpio-brgl-fixes/gpio/for-current
+	tagopt = --no-tags
+[remote "nfsd-fixes"]
+	url = korg:cel/linux
+	fetch = +refs/heads/nfsd-fixes:refs/remotes/nfsd-fixes/nfsd-fixes
+	tagopt = --no-tags
+[remote "rust"]
+	url = gh:Rust-for-Linux/linux.git
+	fetch = +refs/heads/rust-next:refs/remotes/rust/rust-next
+	tagopt = --no-tags
+[remote "rust-interop"]
+	url = gh:Rust-for-Linux/linux.git
+	fetch = +refs/heads/interop-next:refs/remotes/rust-interop/interop-next
+	tagopt = --no-tags
+[remote "ksmbd"]
+	url = gh:smfrench/smb3-kernel.git
+	tagopt = --no-tags
+	fetch = +refs/heads/ksmbd-for-next:refs/remotes/ksmbd/ksmbd-for-next
+[remote "clk-imx"]
+	url = korg:abelvesa/linux.git
+	fetch = +refs/heads/for-next:refs/remotes/clk-imx/for-next
+	tagopt = --no-tags
+[remote "iio-fixes"]
+	url = korg:jic23/iio.git
+	fetch = +refs/heads/fixes-togreg:refs/remotes/iio-fixes/fixes-togreg
+	tagopt = --no-tags
+[remote "iio"]
+	url = korg:jic23/iio.git
+	fetch = +refs/heads/togreg:refs/remotes/iio/togreg
+	tagopt = --no-tags
+[remote "xilinx"]
+	url = gh:Xilinx/linux-xlnx.git
+	fetch = +refs/heads/for-next:refs/remotes/xilinx/for-next
+	tagopt = --no-tags
+[remote "cxl"]
+	url = korg:cxl/cxl.git
+	fetch = +refs/heads/next:refs/remotes/cxl/next
+	tagopt = --no-tags
+[remote "cxl-fixes"]
+	url = korg:cxl/cxl.git
+	fetch = +refs/heads/fixes:refs/remotes/cxl-fixes/fixes
+	tagopt = --no-tags
+[remote "renesas-fixes"]
+	url = korg:geert/renesas-devel.git
+	fetch = +refs/heads/fixes:refs/remotes/renesas-fixes/fixes
+	tagOpt = --no-tags
+[remote "ntfs3"]
+	url = gh:Paragon-Software-Group/linux-ntfs3.git
+	fetch = +refs/heads/master:refs/remotes/ntfs3/master
+	tagOpt = --no-tags
+[remote "libata"]
+	url = korg:libata/linux
+	fetch = +refs/heads/for-next:refs/remotes/libata/for-next
+	tagOpt = --no-tags
+[remote "perf-current"]
+	url = korg:perf/perf-tools.git
+	fetch = +refs/heads/perf-tools:refs/remotes/perf-current/perf-tools
+	tagOpt = --no-tags
+[remote "perf"]
+	url = korg:perf/perf-tools-next.git
+	fetch = +refs/heads/perf-tools-next:refs/remotes/perf/perf-tools-next
+	tagOpt = --no-tags
+[remote "efi-fixes"]
+	url = korg:efi/efi.git
+	fetch = +refs/heads/urgent:refs/remotes/efi-fixes/urgent
+	tagOpt = --no-tags
+[remote "efi"]
+	url = korg:efi/efi.git
+	fetch = +refs/heads/next:refs/remotes/efi/next
+	tagOpt = --no-tags
+[remote "unicode"]
+	url = korg:krisman/unicode.git
+	fetch = +refs/heads/for-next:refs/remotes/unicode/for-next
+	tagOpt = --no-tags
+[remote "tee"]
+	url = korg:jenswi/linux-tee.git
+	fetch = +refs/heads/next:refs/remotes/tee/next
+	tagOpt = --no-tags
+[remote "ti"]
+	url = korg:ti/linux.git
+	fetch = +refs/heads/ti-next:refs/remotes/ti/ti-next
+	tagOpt = --no-tags
+[remote "slab"]
+	url = korg:vbabka/slab.git
+	fetch = +refs/heads/slab/for-next:refs/remotes/slab/slab/for-next
+	tagOpt = --no-tags
+[remote "random"]
+	url = korg:crng/random.git
+	fetch = +refs/heads/master:refs/remotes/random/master
+	tagOpt = --no-tags
+[remote "landlock"]
+	url = korg:mic/linux.git
+	fetch = +refs/heads/next:refs/remotes/landlock/next
+	tagOpt = --no-tags
+[remote "wireless"]
+	url = korg:wireless/wireless.git
+	fetch = +refs/heads/for-next:refs/remotes/wireless/for-next
+	tagOpt = --no-tags
+[remote "wireless-next"]
+	url = korg:wireless/wireless-next.git
+	fetch = +refs/heads/for-next:refs/remotes/wireless-next/for-next
+	tagOpt = --no-tags
+[remote "fbdev"]
+	url = korg:deller/linux-fbdev.git
+	fetch = +refs/heads/for-next:refs/remotes/fbdev/for-next
+	tagOpt = --no-tags
+[remote "maple"]
+	url = gh:oracle/linux-uek.git
+	fetch = +refs/heads/maple/mainline:refs/remotes/maple/maple/mainline
+	tagOpt = --no-tags
+[remote "sysctl"]
+	url = korg:sysctl/sysctl.git
+	fetch = +refs/heads/sysctl-next:refs/remotes/sysctl/sysctl-next
+	tagOpt = --no-tags
+[remote "execve"]
+	url = korg:kees/linux.git
+	fetch = +refs/heads/for-next/execve:refs/remotes/execve/for-next/execve
+	tagOpt = --no-tags
+[remote "counter-current"]
+	url = korg:wbg/counter.git
+	fetch = +refs/heads/counter-current:refs/remotes/counter-current/counter-current
+	tagOpt = --no-tags
+[remote "bitmap"]
+	url = gh:norov/linux.git
+	fetch = +refs/heads/bitmap-for-next:refs/remotes/bitmap/bitmap-for-next
+	tagOpt = --no-tags
+[remote "mm-hotfixes"]
+	url = korg:akpm/mm
+	fetch = +refs/heads/mm-hotfixes-stable:refs/remotes/mm-hotfixes/mm-hotfixes-stable
+	fetch = +refs/heads/mm-hotfixes-unstable:refs/remotes/mm-hotfixes/mm-hotfixes-unstable
+	tagOpt = --no-tags
+[remote "mm-stable"]
+	url = korg:akpm/mm
+	fetch = +refs/heads/mm-stable:refs/remotes/mm-stable/mm-stable
+	tagOpt = --no-tags
+[remote "mm-nonmm-stable"]
+	url = korg:akpm/mm
+	fetch = +refs/heads/mm-nonmm-stable:refs/remotes/mm-nonmm-stable/mm-nonmm-stable
+	tagOpt = --no-tags
+[remote "loongarch"]
+	url = korg:chenhuacai/linux-loongson.git
+	fetch = +refs/heads/loongarch-next:refs/remotes/loongarch/loongarch-next
+	tagOpt = --no-tags
+[remote "clang-format"]
+	url = gh:ojeda/linux.git
+	fetch = +refs/heads/clang-format:refs/remotes/clang-format/clang-format
+	tagOpt = --no-tags
+[remote "battery-fixes"]
+	url = korg:sre/linux-power-supply.git
+	fetch = +refs/heads/fixes:refs/remotes/battery-fixes/fixes
+	tagOpt = --no-tags
+[remote "broadcom"]
+	url = gh:Broadcom/stblinux.git
+	fetch = +refs/heads/next:refs/remotes/broadcom/next
+	tagOpt = --no-tags
+[remote "drm-msm-lumag"]
+	url = gfo:lumag/msm.git
+	fetch = +refs/heads/msm-next-lumag:refs/remotes/drm-msm-lumag/msm-next-lumag
+	tagOpt = --no-tags
+[remote "dt-krzk-fixes"]
+	url = korg:krzk/linux-dt.git
+	fetch = +refs/heads/fixes:refs/remotes/dt-krzk-fixes/fixes
+	tagOpt = --no-tags
+[remote "dt-krzk"]
+	url = korg:krzk/linux-dt.git
+	fetch = +refs/heads/for-next:refs/remotes/dt-krzk/for-next
+	tagOpt = --no-tags
+[remote "hte"]
+	url = korg:pateldipen1984/linux.git
+	fetch = +refs/heads/for-next:refs/remotes/hte/for-next
+	tagOpt = --no-tags
+[remote "counter-next"]
+	url = korg:wbg/counter.git
+	fetch = +refs/heads/counter-next:refs/remotes/counter-next/counter-next
+	tagOpt = --no-tags
+[remote "asahi-soc"]
+	url = gh:AsahiLinux/linux.git
+	fetch = +refs/heads/asahi-soc/for-next:refs/remotes/asahi-soc/asahi-soc/for-next
+	tagOpt = --no-tags
+[remote "davinci"]
+	url = korg:brgl/linux.git
+	fetch = +refs/heads/davinci/for-next:refs/remotes/davinci/davinci/for-next
+	tagOpt = --no-tags
+[remote "davinci-current"]
+	url = korg:brgl/linux.git
+	fetch = +refs/heads/davinci/for-current:refs/remotes/davinci-current/davinci/for-current
+	tagOpt = --no-tags
+[remote "iommufd-fixes"]
+	url = korg:jgg/iommufd.git
+	fetch = +refs/heads/for-rc:refs/remotes/iommufd-fixes/for-rc
+	tagOpt = --no-tags
+[remote "iommufd"]
+	url = korg:jgg/iommufd.git
+	fetch = +refs/heads/for-next:refs/remotes/iommufd/for-next
+	tagOpt = --no-tags
+[remote "riscv-dt-fixes"]
+	url = korg:conor/linux.git
+	fetch = +refs/heads/riscv-dt-fixes:refs/remotes/riscv-dt-fixes/riscv-dt-fixes
+	tagOpt = --no-tags
+[remote "riscv-dt"]
+	url = korg:conor/linux.git
+	fetch = +refs/heads/riscv-dt-for-next:refs/remotes/riscv-dt/riscv-dt-for-next
+	tagOpt = --no-tags
+[remote "riscv-soc-fixes"]
+	url = korg:conor/linux.git
+	fetch = +refs/heads/riscv-soc-fixes:refs/remotes/riscv-soc-fixes/riscv-soc-fixes
+	tagOpt = --no-tags
+[remote "riscv-soc"]
+	url = korg:conor/linux.git
+	fetch = +refs/heads/riscv-soc-for-next:refs/remotes/riscv-soc/riscv-soc-for-next
+	tagOpt = --no-tags
+[remote "leds-lj"]
+	url = korg:lee/leds.git
+	fetch = +refs/heads/for-leds-next:refs/remotes/leds-lj/for-leds-next
+	tagOpt = --no-tags
+[remote "rust-fixes"]
+	url = gh:Rust-for-Linux/linux.git
+	fetch = +refs/heads/rust-fixes:refs/remotes/rust-fixes/rust-fixes
+	tagOpt = --no-tags
+[remote "kvm-x86"]
+	url = gh:kvm-x86/linux.git
+	fetch = +refs/heads/next:refs/remotes/kvm-x86/next
+	tagOpt = --no-tags
+[remote "v9fs-ericvh"]
+	url = korg:ericvh/v9fs.git
+	fetch = +refs/heads/ericvh/for-next:refs/remotes/v9fs-ericvh/ericvh/for-next
+	tagOpt = --no-tags
+[remote "sh"]
+	url = korg:glaubitz/sh-linux.git
+	fetch = +refs/heads/for-next:refs/remotes/sh/for-next
+	tagOpt = --no-tags
+[remote "v9fs-fixes"]
+	url = korg:ericvh/v9fs.git
+	fetch = +refs/heads/fixes/next:refs/remotes/v9fs-fixes/fixes/next
+	tagOpt = --no-tags
+[remote "wpan"]
+	url = korg:wpan/wpan.git
+	fetch = +refs/heads/master:refs/remotes/wpan/master
+	tagOpt = --no-tags
+[remote "wpan-next"]
+	url = korg:wpan/wpan-next.git
+	fetch = +refs/heads/master:refs/remotes/wpan-next/master
+	tagOpt = --no-tags
+[remote "ieee1394"]
+	url = korg:ieee1394/linux1394.git
+	fetch = +refs/heads/for-next:refs/remotes/ieee1394/for-next
+	tagOpt = --no-tags
+[remote "kvm-riscv"]
+	url = https://github.com/kvm-riscv/linux.git
+	fetch = +refs/heads/riscv_kvm_next:refs/remotes/kvm-riscv/riscv_kvm_next
+	tagOpt = --no-tags
+[remote "w1"]
+	url = korg:krzk/linux-w1.git
+	fetch = +refs/heads/for-next:refs/remotes/w1/for-next
+	tagOpt = --no-tags
+[remote "w1-fixes"]
+	url = korg:krzk/linux-w1.git
+	fetch = +refs/heads/fixes:refs/remotes/w1-fixes/fixes
+	tagOpt = --no-tags
+[diff]
+	algorithm = histogram
+[remote "fastrpc"]
+	url = korg:srini/fastrpc.git
+	fetch = +refs/heads/for-next:refs/remotes/fastrpc/for-next
+	tagOpt = --no-tags
+[remote "wpan-staging"]
+	url = korg:wpan/wpan-next.git
+	fetch = +refs/heads/staging:refs/remotes/wpan-staging/staging
+	tagOpt = --no-tags
+[remote "vfs-brauner"]
+	url = korg:vfs/vfs.git
+	fetch = +refs/heads/vfs.all:refs/remotes/vfs-brauner/vfs.all
+	tagOpt = --no-tags
+[remote "nolibc"]
+	url = korg:nolibc/linux-nolibc.git
+	fetch = +refs/heads/for-next:refs/remotes/nolibc/for-next
+	tagOpt = --no-tags
+[remote "chrome-platform-firmware"]
+	url = korg:chrome-platform/linux.git
+	fetch = +refs/heads/for-firmware-next:refs/remotes/chrome-platform-firmware/for-firmware-next
+	tagOpt = --no-tags
+[remote "pmdomain-fixes"]
+	url = korg:ulfh/linux-pm.git
+	tagOpt = --no-tags
+	fetch = +refs/heads/fixes:refs/remotes/pmdomain-fixes/fixes
+[remote "pmdomain"]
+	url = korg:ulfh/linux-pm.git
+	tagOpt = --no-tags
+	fetch = +refs/heads/next:refs/remotes/pmdomain/next
+[remote "kvm-ppc"]
+	url = korg:powerpc/linux.git
+	tagOpt = --no-tags
+	fetch = +refs/heads/topic/ppc-kvm:refs/remotes/kvm-ppc/topic/ppc-kvm
+[remote "overlayfs-fixes"]
+	url = korg:overlayfs/vfs.git
+	fetch = +refs/heads/ovl-fixes:refs/remotes/overlayfs-fixes/ovl-fixes
+	tagOpt = --no-tags
+[remote "spmi"]
+	url = korg:sboyd/spmi.git
+	fetch = +refs/heads/spmi-next:refs/remotes/spmi/spmi-next
+	tagOpt = --no-tags
+[remote "drm-exynos"]
+	url = korg:daeinki/drm-exynos.git
+	fetch = +refs/heads/for-linux-next:refs/remotes/drm-exynos/for-linux-next
+	tagOpt = --no-tags
+[remote "i2c-host"]
+	url = korg:andi.shyti/linux.git
+	fetch = +refs/heads/i2c/i2c-host:refs/remotes/i2c-host/i2c/i2c-host
+	tagOpt = --no-tags
+[remote "i2c-host-fixes"]
+	url = korg:andi.shyti/linux.git
+	fetch = +refs/heads/i2c/i2c-host-fixes:refs/remotes/i2c-host-fixes/i2c/i2c-host-fixes
+	tagOpt = --no-tags
+[remote "sophgo"]
+	url = gh:sophgo/linux.git
+	fetch = +refs/heads/for-next:refs/remotes/sophgo/for-next
+	tagOpt = --no-tags
+[remote "sophgo-fixes"]
+	url = gh:sophgo/linux.git
+	fetch = +refs/heads/fixes:refs/remotes/sophgo-fixes/fixes
+	tagOpt = --no-tags
+[remote "auxdisplay-fixes"]
+	url = korg:andy/linux-auxdisplay.git
+	fetch = +refs/heads/fixes:refs/remotes/auxdisplay-fixes/fixes
+	tagOpt = --no-tags
+[remote "auxdisplay"]
+	url = korg:andy/linux-auxdisplay.git
+	fetch = +refs/heads/for-next:refs/remotes/auxdisplay/for-next
+	tagOpt = --no-tags
+[remote "drm-xe"]
+	url = gfo:drm/xe/kernel.git
+	fetch = +refs/heads/drm-xe-next:refs/remotes/drm-xe/drm-xe-next
+	tagOpt = --no-tags
+[remote "sparc-fixes"]
+	url = korg:alarsson/linux-sparc.git
+	fetch = +refs/heads/for-linus:refs/remotes/sparc-fixes/for-linus
+	tagOpt = --no-tags
+[remote "sparc"]
+	url = korg:alarsson/linux-sparc.git
+	fetch = +refs/heads/for-next:refs/remotes/sparc/for-next
+	tagOpt = --no-tags
+[remote "clk-fixes"]
+	url = korg:clk/linux.git
+	fetch = +refs/heads/clk-fixes:refs/remotes/clk-fixes/clk-fixes
+	tagOpt = --no-tags
+[remote "turbostat"]
+	url = korg:lenb/linux.git
+	fetch = +refs/heads/next:refs/remotes/turbostat/next
+	tagOpt = --no-tags
+[remote "rcu"]
+	url = korg:rcu/linux
+	fetch = +refs/heads/next:refs/remotes/rcu/next
+	tagOpt = --no-tags
+[remote "vfs-brauner-fixes"]
+	url = korg:vfs/vfs.git
+	fetch = +refs/heads/vfs.fixes:refs/remotes/vfs-brauner-fixes/vfs.fixes
+	tagOpt = --no-tags
+[remote "pwrseq"]
+	url = korg:brgl/linux.git
+	fetch = +refs/heads/pwrseq/for-next:refs/remotes/pwrseq/pwrseq/for-next
+	tagOpt = --no-tags
+[remote "pwrseq-fixes"]
+	url = korg:brgl/linux.git
+	fetch = +refs/heads/pwrseq/for-current:refs/remotes/pwrseq-fixes/pwrseq/for-current
+	tagOpt = --no-tags
+[remote "sched-ext"]
+	url = korg:tj/sched_ext.git
+	fetch = +refs/heads/for-next:refs/remotes/sched-ext/for-next
+	tagOpt = --no-tags
+[remote "thead-dt-fixes"]
+	url = korg:fustini/linux.git
+	fetch = +refs/heads/thead-dt-fixes:refs/remotes/thead-dt-fixes/thead-dt-fixes
+	tagOpt = --no-tags
+[remote "thead-dt"]
+	url = korg:fustini/linux.git
+	fetch = +refs/heads/thead-dt-for-next:refs/remotes/thead-dt/thead-dt-for-next
+	tagOpt = --no-tags
+[remote "ath"]
+	url = korg:ath/ath.git
+	fetch = +refs/heads/for-current:refs/remotes/ath/for-current
+	tagOpt = --no-tags
+[remote "ath-next"]
+	url = korg:ath/ath.git
+	fetch = +refs/heads/for-next:refs/remotes/ath-next/for-next
+	tagOpt = --no-tags
+[remote "capabilities-next"]
+	url = korg:sergeh/linux.git
+	fetch = +refs/heads/caps-next:refs/remotes/capabilities-next/caps-next
+	tagOpt = --no-tags
+[remote "ipe"]
+	url = korg:wufan/ipe.git
+	fetch = +refs/heads/next:refs/remotes/ipe/next
+	tagOpt = --no-tags
+[remote "kcsan"]
+	url = korg:melver/linux.git
+	fetch = +refs/heads/next:refs/remotes/kcsan/next
+	tagOpt = --no-tags
+[remote "ftrace-fixes"]
+	url = korg:trace/linux-trace.git
+	fetch = +refs/heads/ftrace/fixes:refs/remotes/ftrace-fixes/ftrace/fixes
+	tagOpt = --no-tags
+[remote "ring-buffer-fixes"]
+	url = korg:trace/linux-trace.git
+	fetch = +refs/heads/ring-buffer/fixes:refs/remotes/ring-buffer-fixes/ring-buffer/fixes
+	tagOpt = --no-tags
+[remote "trace-fixes"]
+	url = korg:trace/linux-trace.git
+	fetch = +refs/heads/trace/fixes:refs/remotes/trace-fixes/trace/fixes
+	tagOpt = --no-tags
+[remote "spacemit"]
+	url = gh:spacemit-com/linux
+	fetch = +refs/heads/for-next:refs/remotes/spacemit/for-next
+	tagOpt = --no-tags
+[remote "spacemit-fixes"]
+	url = gh:spacemit-com/linux
+	fetch = +refs/heads/fixes:refs/remotes/spacemit-fixes/fixes
+	tagOpt = --no-tags
+[remote "ext4-fixes"]
+	url = korg:tytso/ext4.git
+	fetch = +refs/heads/fixes:refs/remotes/ext4-fixes/fixes
+	tagOpt = --no-tags
+[remote "tracefs-fixes"]
+	url = korg:trace/linux-trace.git
+	fetch = +refs/heads/tracefs/fixes:refs/remotes/tracefs-fixes/tracefs/fixes
+	tagOpt = --no-tags
+[remote "tip-fixes"]
+	url = korg:tip/tip.git
+	fetch = +refs/heads/tip/urgent:refs/remotes/tip-fixes/tip/urgent
+	tagOpt = --no-tags
+[remote "slab-fixes"]
+	url = korg:vbabka/slab.git
+	fetch = +refs/heads/slab/for-next-fixes:refs/remotes/slab-fixes/slab/for-next-fixes
+	tagOpt = --no-tags
+[remote "crc"]
+	url = korg:ebiggers/linux.git
+	fetch = +refs/heads/crc-next:refs/remotes/crc/crc-next
+	tagOpt = --no-tags
+[remote "kthread"]
+	url = korg:frederic/linux-dynticks.git
+	fetch = +refs/heads/for-next:refs/remotes/kthread/for-next
+	tagOpt = --no-tags
+[remote "drm-msm-fixes"]
+	url = gfo:drm/msm.git
+	fetch = +refs/heads/msm-fixes:refs/remotes/drm-msm-fixes/msm-fixes
+	tagOpt = --no-tags
+[remote "linus"]
+	url = korg:torvalds/linux.git
+	fetch = +refs/heads/for-next:refs/remotes/linus/for-next
+	tagOpt = --no-tags
+[remote "uml-fixes"]
+	url = korg:uml/linux.git
+	fetch = +refs/heads/fixes:refs/remotes/uml-fixes/fixes
+	tagOpt = --no-tags
+[remote "alpha"]
+	url = korg:mattst88/alpha.git
+	fetch = +refs/heads/alpha-next:refs/remotes/alpha/alpha-next
+	tagOpt = --no-tags
+[remote "rust-pin-init"]
+	url = gh:Rust-for-Linux/linux.git
+	fetch = +refs/heads/pin-init-next:refs/remotes/rust-pin-init/pin-init-next
+	tagOpt = --no-tags
+[remote "zstd"]
+	url = gh:terrelln/linux.git
+	fetch = +refs/heads/zstd-next:refs/remotes/zstd/zstd-next
+	tagOpt = --no-tags
+[remote "rust-timekeeping"]
+	url = gh:Rust-for-Linux/linux.git
+	fetch = +refs/heads/timekeeping-next:refs/remotes/rust-timekeeping/timekeeping-next
+	tagOpt = --no-tags
+[remote "rust-alloc"]
+	url = gh:Rust-for-Linux/linux.git
+	fetch = +refs/heads/alloc-next:refs/remotes/rust-alloc/alloc-next
+	tagOpt = --no-tags
+[remote "drm-nova"]
+	url = gfo:drm/nova.git
+	fetch = +refs/heads/nova-next:refs/remotes/drm-nova/nova-next
+	tagOpt = --no-tags
+[remote "mm-unstable"]
+	url = korg:akpm/mm
+	fetch = +refs/heads/mm-unstable:refs/remotes/mm-unstable/mm-unstable
+	tagOpt = --no-tags
+[remote "mm-nonmm-unstable"]
+	url = korg:akpm/mm
+	fetch = +refs/heads/mm-nonmm-unstable:refs/remotes/mm-nonmm-unstable/mm-nonmm-unstable
+	tagOpt = --no-tags
+[remote "fwctl"]
+	url = korg:fwctl/fwctl.git
+	fetch = +refs/heads/for-next:refs/remotes/fwctl/for-next
+	tagOpt = --no-tags
+[remote "fwctl-fixes"]
+	url = korg:fwctl/fwctl.git
+	fetch = +refs/heads/for-rc:refs/remotes/fwctl-fixes/for-rc
+	tagOpt = --no-tags
+[remote "rust-xarray"]
+	url = gh:Rust-for-Linux/linux.git
+	fetch = +refs/heads/xarray-next:refs/remotes/rust-xarray/xarray-next
+	tagOpt = --no-tags
+[remote "devsec-tsm-fixes"]
+	url = korg:devsec/tsm.git
+	tagOpt = --no-tags
+	fetch = +refs/heads/fixes:refs/remotes/devsec-tsm-fixes/fixes
+[remote "devsec-tsm"]
+	url = korg:devsec/tsm.git
+	fetch = +refs/heads/next:refs/remotes/devsec-tsm/next
+	tagOpt = --no-tags
+[remote "iwlwifi"]
+	url = korg:iwlwifi/iwlwifi-next.git
+	tagOpt = --no-tags
+	fetch = +refs/heads/fixes:refs/remotes/iwlwifi/fixes
+[remote "iwlwifi-next"]
+	url = korg:iwlwifi/iwlwifi-next.git
+	tagOpt = --no-tags
+	fetch = +refs/heads/next:refs/remotes/iwlwifi-next/next
+[remote "sophgo-soc"]
+	url = gh:sophgo/linux.git
+	tagOpt = --no-tags
+	fetch = +refs/heads/soc-for-next:refs/remotes/sophgo-soc/soc-for-next
+[remote "sophgo-soc-fixes"]
+	url = gh:sophgo/linux.git
+	tagOpt = --no-tags
+	fetch = +refs/heads/soc-fixes:refs/remotes/sophgo-soc-fixes/soc-fixes
+[remote "thead-clk-fixes"]
+	url = korg:fustini/linux.git
+	fetch = +refs/heads/thead-clk-fixes:refs/remotes/thead-clk-fixes/thead-clk-fixes
+	tagOpt = --no-tags
+[remote "thead-clk"]
+	url = korg:fustini/linux.git
+	fetch = +refs/heads/thead-clk-for-next:refs/remotes/thead-clk/thead-clk-for-next
+	tagOpt = --no-tags
+[remote "libcrypto"]
+	url = korg:ebiggers/linux.git
+	fetch = +refs/heads/libcrypto-next:refs/remotes/libcrypto/libcrypto-next
+	tagOpt = --no-tags
+[remote "libcrypto-fixes"]
+	url = korg:ebiggers/linux.git
+	fetch = +refs/heads/libcrypto-fixes:refs/remotes/libcrypto-fixes/libcrypto-fixes
+	tagOpt = --no-tags
+[remote "rust-io"]
+	url = gh:Rust-for-Linux/linux.git
+	fetch = +refs/heads/io-next:refs/remotes/rust-io/io-next
+	tagOpt = --no-tags
+[remote "bmc"]
+	url = korg:bmc/linux.git
+	fetch = +refs/heads/for-next:refs/remotes/bmc/for-next
+	tagOpt = --no-tags
+[remote "fsl"]
+	url = korg:chleroy/linux.git
+	tagOpt = --no-tags
+	fetch = +refs/heads/soc_fsl:refs/remotes/fsl/soc_fsl
+[remote "hisilicon"]
+	url = gh:hisilicon/linux-hisi.git
+	fetch = +refs/heads/for-next:refs/remotes/hisilicon/for-next
+	tagOpt = --no-tags
+[remote "drm-rust-fixes"]
+	url = gfo:drm/rust/kernel.git
+	fetch = +refs/heads/for-linux-next-fixes:refs/remotes/drm-rust-fixes/for-linux-next-fixes
+	tagOpt = --no-tags
+[remote "drm-rust"]
+	url = gfo:drm/rust/kernel.git
+	fetch = +refs/heads/for-linux-next:refs/remotes/drm-rust/for-linux-next
+	tagOpt = --no-tags
+[remote "cix"]
+	url = korg:peter.chen/cix.git
+	fetch = +refs/heads/for-next:refs/remotes/cix/for-next
+	tagOpt = --no-tags
+[remote "tenstorrent-dt"]
+	url = korg:tenstorrent/linux.git
+	fetch = +refs/heads/tenstorrent-dt-for-next:refs/remotes/tenstorrent-dt/tenstorrent-dt-for-next
+	tagOpt = --no-tags
+[remote "tenstorrent-dt-fixes"]
+	url = korg:tenstorrent/linux.git
+	fetch = +refs/heads/tenstorrent-dt-fixes:refs/remotes/tenstorrent-dt-fixes/tenstorrent-dt-fixes
+	tagOpt = --no-tags
+[remote "tenstorrent-clk"]
+	url = korg:tenstorrent/linux.git
+	fetch = +refs/heads/tenstorrent-clk-for-next:refs/remotes/tenstorrent-clk/tenstorrent-clk-for-next
+	tagOpt = --no-tags
+[remote "tenstorrent-clk-fixes"]
+	url = korg:tenstorrent/linux.git
+	fetch = +refs/heads/tenstorrent-clk-fixes:refs/remotes/tenstorrent-clk-fixes/tenstorrent-clk-fixes
+	tagOpt = --no-tags
+[remote "rust-analyzer"]
+	url = gh:Rust-for-Linux/linux.git
+	fetch = +refs/heads/rust-analyzer-next:refs/remotes/rust-analyzer/rust-analyzer-next
+	tagOpt = --no-tags
+[branch "fs-next"]
+	remote = korg
+	merge = refs/heads/fs-current
+[branch "stable"]
+	remote = origin
+	merge = refs/heads/master
+[remote "keys-next"]
+	url = korg:dhowells/linux-fs.git
+	fetch = +refs/heads/keys-next:refs/remotes/keys-next/keys-next
+	tagOpt = --no-tags
+[remote "ntfs"]
+	url = korg:linkinjeon/ntfs.git
+	fetch = +refs/heads/ntfs-next:refs/remotes/ntfs/ntfs-next
+	tagOpt = --no-tags
+[remote "socfpga"]
+	url = korg:dinguyen/linux.git
+	fetch = +refs/heads/for-next:refs/remotes/socfpga/for-next
+	tagOpt = --no-tags
+[remote "drbd"]
+	url = gh:LINBIT/linux-drbd.git
+	fetch = +refs/heads/drbd-next:refs/remotes/drbd/drbd-next
+	tagOpt = --no-tags
+[remote "i2c-rust-fixes"]
+	url = gh:ikrtn/rust-for-linux
+	fetch = +refs/heads/rust-i2c-fixes:refs/remotes/i2c-rust-fixes/rust-i2c-fixes
+	tagOpt = --no-tags
+[remote "i2c-rust"]
+	url = gh:ikrtn/rust-for-linux
+	fetch = +refs/heads/rust-i2c-next:refs/remotes/i2c-rust/rust-i2c-next
+	tagOpt = --no-tags
+[remote "nocache-cleanup"]
+	url = korg:torvalds/linux.git
+	fetch = +refs/heads/nocache-cleanup:refs/remotes/nocache-cleanup/nocache-cleanup
+	tagOpt = --no-tags
+[remote "liveupdate-fixes"]
+	url = korg:liveupdate/linux.git
+	fetch = +refs/heads/fixes:refs/remotes/liveupdate-fixes/fixes
+	tagOpt = --no-tags
+[remote "liveupdate"]
+	url = korg:liveupdate/linux.git
+	fetch = +refs/heads/next:refs/remotes/liveupdate/next
+	tagOpt = --no-tags
+[remote "kexec-fixes"]
+	url = korg:liveupdate/linux.git
+	fetch = +refs/heads/kexec-fixes:refs/remotes/kexec-fixes/kexec-fixes
+	tagOpt = --no-tags
+[remote "kexec"]
+	url = korg:liveupdate/linux.git
+	fetch = +refs/heads/kexec-next:refs/remotes/kexec/kexec-next
+	tagOpt = --no-tags
+[remote "clang-fixes"]
+	url = korg:nathan/linux.git
+	fetch = +refs/heads/clang-fixes-for-next:refs/remotes/clang-fixes/clang-fixes-for-next
+	tagOpt = --no-tags
+[maintenance]
+	auto = false
+	strategy = incremental
+[gui]
+	wmstate = normal
+	geometry = 931x515+5234+748 197 234
+[remote "nfc-fixes"]
+	url = https://codeberg.org/linux-nfc/linux.git
+	fetch = +refs/heads/for-linus:refs/remotes/nfc-fixes/for-linus
+	tagOpt = --no-tags
+[remote "nfc"]
+	url = https://codeberg.org/linux-nfc/linux.git
+	fetch = +refs/heads/for-next:refs/remotes/nfc/for-next
+	tagOpt = --no-tags
