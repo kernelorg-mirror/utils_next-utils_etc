@@ -16,6 +16,7 @@ David Sterba <dsterba@suse.cz>	git	btrfs	-	for-next	no
 Jeff Layton <jlayton@kernel.org>, Ilya Dryomov <idryomov@gmail.com>	git	ceph	-	master	no
 Paulo Alcantara <pc@manguebit.org>, Namjae Jeon <linkinjeon@kernel.org>, CIFS <linux-cifs@vger.kernel.org>	git	cifs	-	cifs-next	no
 Breno Leitao <leitao@debian.org>	git	configfs	-	configfs-next	no
+Andreas Hindborg <a.hindborg@kernel.org>	git	configfs-rust	-	configfs-next	no
 Tyler Hicks <code@tyhicks.com>	git	ecryptfs	-	next	no
 David Teigland <teigland@redhat.com>	git	dlm	-	next	no
 Gao Xiang <xiang@kernel.org>	git	erofs	-	dev	no
@@ -165,6 +166,8 @@ Dan Williams <dan.j.williams@intel.com>, <sathyanarayanan.kuppuswamy@linux.intel
 Alice Ryhl <aliceryhl@google.com>, Danilo Krummrich <dakr@kernel.org>	git	drm-rust-fixes	-	for-linux-next-fixes	no
 Drew Fustini <fustini@kernel.org>, Joel Stanley <joel@jms.id.au>	git	tenstorrent-dt-fixes	-	tenstorrent-dt-fixes	no
 David Heidelberg <david@ixit.cz>	git	nfc-fixes	-	for-linus	no
+Andrew Morton <akpm@linux-foundation.org>	git	mm-nonmm-hotfixes-stable	-	mm-nonmm-hotfixes-stable	no
+Andrew Morton <akpm@linux-foundation.org>	git	mm-nonmm-hotfixes-unstable	-	mm-nonmm-hotfixes-unstable	no
 Simona Vetter <simona.vetter@ffwll.ch>, Intel Graphics <intel-gfx@lists.freedesktop.org>, DRI <dri-devel@lists.freedesktop.org>	git	drm-misc-fixes	-	for-linux-next-fixes	yes
 -	branch	pending-fixes
 Miguel Ojeda <ojeda@kernel.org>	git	rust	-	rust-next	no

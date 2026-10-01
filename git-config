@@ -6,8 +6,10 @@
 [protocol]
 	version = 2
 [url "https://git.kernel.org/pub/scm/linux/kernel/git/"]
+#[url "ssh://git@gitolite.kernel.org/pub/scm/linux/kernel/git/"]
 	insteadOf = korg:
 [url "https://git.kernel.org/pub/scm/fs/"]
+#[url "ssh://git@gitolite.kernel.org/pub/scm/fs/"]
 	insteadOf = korgfs:
 [url "https://github.com/"]
 	insteadof = gh:
@@ -46,7 +48,7 @@
 	skipDefaultUpdate = true
 [remote "korg-history"]
 	url = korg:next/linux-next-history.git
-	pushurl = ssh://gitolite.kernel.org/pub/scm/linux/kernel/git/next/linux-next-history.git
+	pushurl = ssh://git@gitolite.kernel.org/pub/scm/linux/kernel/git/next/linux-next-history.git
 	push = +refs/heads/master:refs/heads/master
 	push = +refs/tags/*:refs/tags/*
 	skipDefaultUpdate = true
@@ -151,8 +153,8 @@
 	fetch = +refs/heads/for-linus:refs/remotes/pci-current/for-linus
 	tagopt = --no-tags
 [remote "cifs"]
-	url = git://git.samba.org/sfrench/cifs-2.6.git
-	fetch = +refs/heads/for-next:refs/remotes/cifs/for-next
+	url = https://git.manguebit.org/linux.git
+	fetch = +refs/heads/cifs-next:refs/remotes/cifs/cifs-next
 	tagopt = --no-tags
 [remote "gfs2"]
 	url = korg:gfs2/linux-gfs2.git
@@ -195,8 +197,12 @@
 	tagopt = --no-tags
 	fetch = +refs/heads/for-next:refs/remotes/regulator/for-next
 [remote "watchdog"]
-	url = git://www.linux-watchdog.org/linux-watchdog-next.git
-	fetch = +refs/heads/master:refs/remotes/watchdog/master
+	url = https://git.kernel.org/pub/scm/linux/kernel/git/groeck/linux-staging.git
+	fetch = +refs/heads/watchdog-next:refs/remotes/watchdog/watchdog-next
+	tagopt = --no-tags
+[remote "watchdog-fixes"]
+	url = https://git.kernel.org/pub/scm/linux/kernel/git/groeck/linux-staging.git
+	fetch = +refs/heads/watchdog:refs/remotes/watchdog-fixes/watchdog
 	tagopt = --no-tags
 [remote "osd"]
 	url = git://git.open-osd.org/linux-open-osd.git
@@ -230,6 +236,10 @@
 	url = korg:rafael/linux-pm.git
 	tagopt = --no-tags
 	fetch = +refs/heads/linux-next:refs/remotes/pm/linux-next
+[remote "bluetooth-fixes"]
+	url = korg:bluetooth/bluetooth.git
+	fetch = +refs/heads/master:refs/remotes/bluetooth-fixes/master
+	tagopt = --no-tags
 [remote "bluetooth"]
 	url = korg:bluetooth/bluetooth-next.git
 	fetch = +refs/heads/master:refs/remotes/bluetooth/master
@@ -349,6 +359,14 @@
 [remote "pinctrl"]
 	url = korg:linusw/linux-pinctrl.git
 	fetch = +refs/heads/for-next:refs/remotes/pinctrl/for-next
+	tagopt = --no-tags
+[remote "pinctrl-qcom-fixes"]
+	url = korg:brgl/linux.git
+	fetch = +refs/heads/pinctrl-qcom/for-current:refs/remotes/pinctrl-qcom-fixes/pinctrl-qcom/for-current
+	tagopt = --no-tags
+[remote "pinctrl-qcom"]
+	url = korg:brgl/linux.git
+	fetch = +refs/heads/pinctrl-qcom/for-next:refs/remotes/pinctrl-qcom/pinctrl-qcom/for-next
 	tagopt = --no-tags
 [remote "char-misc.current"]
 	url = korg:gregkh/char-misc.git
@@ -619,8 +637,12 @@
 	fetch = +refs/heads/main:refs/remotes/ipvs-next/main
 	tagopt = --no-tags
 [remote "configfs"]
-	url = korg:a.hindborg/linux.git
+	url = korg:leitao/linux.git
 	fetch = +refs/heads/configfs-next:refs/remotes/configfs/configfs-next
+	tagopt = --no-tags
+[remote "configfs-rust"]
+	url = korg:a.hindborg/linux.git
+	fetch = +refs/heads/configfs-next:refs/remotes/configfs-rust/configfs-next
 	tagopt = --no-tags
 [remote "btrfs"]
 	url = korg:kdave/linux.git
@@ -725,11 +747,11 @@
 	fetch = +refs/heads/etnaviv/next:refs/remotes/etnaviv/etnaviv/next
 	tagopt = --no-tags
 [remote "reset-fixes"]
-	url = https://git.pengutronix.de/git/pza/linux
+	url = korg:pza/linux
 	fetch = +refs/heads/reset/fixes:refs/remotes/reset-fixes/reset/fixes
 	tagopt = --no-tags
 [remote "reset"]
-	url = https://git.pengutronix.de/git/pza/linux
+	url = korg:pza/linux
 	fetch = +refs/heads/reset/next:refs/remotes/reset/reset/next
 	tagopt = --no-tags
 [remote "dma-mapping"]
@@ -788,6 +810,14 @@
 	url = korg:mediatek/linux.git
 	fetch = +refs/heads/for-next:refs/remotes/mediatek/for-next
 	tagopt = --no-tags
+[remote "realtek"]
+	url = korg:yu_chun/linux.git
+	fetch = +refs/heads/for-next:refs/remotes/realtek/for-next
+	tagopt = --no-tags
+[remote "realtek-fixes"]
+	url = korg:yu_chun/linux.git
+	fetch = +refs/heads/fixes:refs/remotes/realtek-fixes/fixes
+	tagopt = --no-tags
 [remote "hwmon-fixes"]
 	url = korg:groeck/linux-staging.git
 	fetch = +refs/heads/hwmon:refs/remotes/hwmon-fixes/hwmon
@@ -819,6 +849,10 @@
 [remote "omap-fixes"]
 	url = korg:khilman/linux-omap.git
 	fetch = +refs/heads/fixes:refs/remotes/omap-fixes/fixes
+	tagopt = --no-tags
+[remote "tegra-fixes"]
+	url = korg:tegra/linux.git
+	fetch = +refs/heads/fixes:refs/remotes/tegra-fixes/fixes
 	tagopt = --no-tags
 [remote "btrfs-fixes"]
 	url = korg:kdave/linux.git
@@ -863,6 +897,10 @@
 [remote "xarray"]
 	url = git://git.infradead.org/users/willy/xarray.git
 	fetch = +refs/heads/main:refs/remotes/xarray/main
+	tagopt = --no-tags
+[remote "pagemap-headers"]
+	url = git://git.infradead.org/users/willy/pagecache.git
+	fetch = +refs/heads/headers:refs/remotes/pagemap-headers/headers
 	tagopt = --no-tags
 [remote "mlx5-next"]
 	url = korg:mellanox/linux.git
@@ -1131,7 +1169,8 @@
 	fetch = +refs/heads/interop-next:refs/remotes/rust-interop/interop-next
 	tagopt = --no-tags
 [remote "ksmbd"]
-	url = gh:smfrench/smb3-kernel.git
+	#url = gh:smfrench/smb3-kernel.git
+	url = korg:linkinjeon/smb.git
 	tagopt = --no-tags
 	fetch = +refs/heads/ksmbd-for-next:refs/remotes/ksmbd/ksmbd-for-next
 [remote "clk-imx"]
@@ -1242,14 +1281,25 @@
 	url = gh:norov/linux.git
 	fetch = +refs/heads/bitmap-for-next:refs/remotes/bitmap/bitmap-for-next
 	tagOpt = --no-tags
-[remote "mm-hotfixes"]
-	url = korg:akpm/mm
-	fetch = +refs/heads/mm-hotfixes-stable:refs/remotes/mm-hotfixes/mm-hotfixes-stable
-	fetch = +refs/heads/mm-hotfixes-unstable:refs/remotes/mm-hotfixes/mm-hotfixes-unstable
+[remote "mm-fixes"]
+	url = korg:mm/linux.git
+	fetch = +refs/heads/for-next-fixes:refs/remotes/mm-fixes/for-next-fixes
+	tagOpt = --no-tags
+[remote "mm"]
+	url = korg:mm/linux.git
+	fetch = +refs/heads/for-next:refs/remotes/mm/for-next
 	tagOpt = --no-tags
 [remote "mm-stable"]
 	url = korg:akpm/mm
 	fetch = +refs/heads/mm-stable:refs/remotes/mm-stable/mm-stable
+	tagOpt = --no-tags
+[remote "mm-nonmm-hotfixes-stable"]
+	url = korg:akpm/mm
+	fetch = +refs/heads/mm-nonmm-hotfixes-stable:refs/remotes/mm-nonmm-hotfixes-stable/mm-nonmm-hotfixes-stable
+	tagOpt = --no-tags
+[remote "mm-nonmm-hotfixes-unstable"]
+	url = korg:akpm/mm
+	fetch = +refs/heads/mm-nonmm-hotfixes-unstable:refs/remotes/mm-nonmm-hotfixes-unstable/mm-nonmm-hotfixes-unstable
 	tagOpt = --no-tags
 [remote "mm-nonmm-stable"]
 	url = korg:akpm/mm
@@ -1421,13 +1471,13 @@
 	url = korg:daeinki/drm-exynos.git
 	fetch = +refs/heads/for-linux-next:refs/remotes/drm-exynos/for-linux-next
 	tagOpt = --no-tags
-[remote "i2c-host"]
+[remote "i2c-andi"]
 	url = korg:andi.shyti/linux.git
-	fetch = +refs/heads/i2c/i2c-host:refs/remotes/i2c-host/i2c/i2c-host
+	fetch = +refs/heads/i2c/i2c-next:refs/remotes/i2c-andi/i2c/i2c-next
 	tagOpt = --no-tags
-[remote "i2c-host-fixes"]
+[remote "i2c-andi-fixes"]
 	url = korg:andi.shyti/linux.git
-	fetch = +refs/heads/i2c/i2c-host-fixes:refs/remotes/i2c-host-fixes/i2c/i2c-host-fixes
+	fetch = +refs/heads/i2c/i2c-fixes:refs/remotes/i2c-andi-fixes/i2c/i2c-fixes
 	tagOpt = --no-tags
 [remote "sophgo"]
 	url = gh:sophgo/linux.git
@@ -1526,11 +1576,11 @@
 	fetch = +refs/heads/trace/fixes:refs/remotes/trace-fixes/trace/fixes
 	tagOpt = --no-tags
 [remote "spacemit"]
-	url = gh:spacemit-com/linux
+	url = korg:spacemit/linux
 	fetch = +refs/heads/for-next:refs/remotes/spacemit/for-next
 	tagOpt = --no-tags
 [remote "spacemit-fixes"]
-	url = gh:spacemit-com/linux
+	url = korg:spacemit/linux
 	fetch = +refs/heads/fixes:refs/remotes/spacemit-fixes/fixes
 	tagOpt = --no-tags
 [remote "ext4-fixes"]
@@ -1697,6 +1747,14 @@
 	url = korg:tenstorrent/linux.git
 	fetch = +refs/heads/tenstorrent-clk-fixes:refs/remotes/tenstorrent-clk-fixes/tenstorrent-clk-fixes
 	tagOpt = --no-tags
+[remote "fustini-config"]
+	url = korg:fustini/linux.git
+	fetch = +refs/heads/riscv-config-for-next:refs/remotes/fustini-config/riscv-config-for-next
+	tagOpt = --no-tags
+[remote "fustini-config-fixes"]
+	url = korg:fustini/linux.git
+	fetch = +refs/heads/riscv-config-fixes:refs/remotes/fustini-config-fixes/riscv-config-fixes
+	tagOpt = --no-tags
 [remote "rust-analyzer"]
 	url = gh:Rust-for-Linux/linux.git
 	fetch = +refs/heads/rust-analyzer-next:refs/remotes/rust-analyzer/rust-analyzer-next
@@ -1751,16 +1809,14 @@
 	url = korg:liveupdate/linux.git
 	fetch = +refs/heads/kexec-next:refs/remotes/kexec/kexec-next
 	tagOpt = --no-tags
+[remote "clang-fixes-current"]
+	url = korg:nathan/linux.git
+	fetch = +refs/heads/clang-fixes-for-current:refs/remotes/clang-fixes-current/clang-fixes-for-current
+	tagOpt = --no-tags
 [remote "clang-fixes"]
 	url = korg:nathan/linux.git
 	fetch = +refs/heads/clang-fixes-for-next:refs/remotes/clang-fixes/clang-fixes-for-next
 	tagOpt = --no-tags
-[maintenance]
-	auto = false
-	strategy = incremental
-[gui]
-	wmstate = normal
-	geometry = 931x515+5234+748 197 234
 [remote "nfc-fixes"]
 	url = https://codeberg.org/linux-nfc/linux.git
 	fetch = +refs/heads/for-linus:refs/remotes/nfc-fixes/for-linus
@@ -1769,3 +1825,13 @@
 	url = https://codeberg.org/linux-nfc/linux.git
 	fetch = +refs/heads/for-next:refs/remotes/nfc/for-next
 	tagOpt = --no-tags
+[remote "device-id"]
+	url = korg:ukleinek/linux.git
+	fetch = +refs/heads/device-id-rework:refs/remotes/device-id/device-id-rework
+	tagOpt = --no-tags
+[maintenance]
+	auto = false
+	strategy = incremental
+[gui]
+	wmstate = normal
+	geometry = 931x515+5234+748 197 234
