@@ -556,6 +556,14 @@
 	url = korg:khilman/linux-omap.git
 	fetch = +refs/heads/for-next:refs/remotes/omap/for-next
 	tagopt = --no-tags
+[remote "nomadik"]
+	url = korg:linusw/linux-nomadik.git
+	fetch = +refs/heads/for-next:refs/remotes/nomadik/for-next
+	tagopt = --no-tags
+[remote "integrator"]
+	url = korg:linusw/linux-integrator.git
+	fetch = +refs/heads/for-next:refs/remotes/integrator/for-next
+	tagopt = --no-tags
 [remote "livepatching"]
 	url = korg:livepatching/livepatching.git
 	fetch = +refs/heads/for-next:refs/remotes/livepatching/for-next

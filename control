@@ -213,6 +213,8 @@ Geert Uytterhoeven <geert@linux-m68k.org>	git	renesas	-	next	no
 Philipp Zabel <p.zabel@pengutronix.de>	git	reset	-	reset/next	no
 Heiko Stuebner <heiko@sntech.de>	git	rockchip	-	for-next	no
 Krzysztof Kozlowski <krzk@kernel.org>	git	samsung-krzk	-	for-next	no
+Linus Walleij <linusw@kernel.org>	git	nomadik	-	for-next	no	
+Linus Walleij <linusw@kernel.org>	git	integrator	-	for-next	no	
 Sudeep Holla <sudeep.holla@arm.com>	git	scmi	-	for-linux-next	no
 Chen Wang <unicorn_wang@outlook.com>, Inochi Amaoto <inochiama@outlook.com>	git	sophgo	-	for-next	no
 Chen Wang <unicorn_wang@outlook.com>, Inochi Amaoto <inochiama@outlook.com>	git	sophgo-soc	-	soc-for-next	no
