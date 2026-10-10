@@ -435,4 +435,5 @@ Dan Williams <dan.j.williams@intel.com>, <sathyanarayanan.kuppuswamy@linux.intel
 Wei Xu <xuwei5@hisilicon.com>	git	hisilicon	-	for-next	no
 Uwe Kleine-König <u.kleine-koenig@baylibre.com>	git	device-id	-	device-id-rework	no
 Frederic Weisbecker <frederic@kernel.org>	git	kthread	-	for-next	no
+Sasha Levin <sashal@kernel.org>	git	kapi	-	spec	no
 Matthew Wilcox <willy@infradead.org>	git	pagemap-headers	-	headers	yes

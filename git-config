@@ -1837,6 +1837,10 @@
 	url = korg:ukleinek/linux.git
 	fetch = +refs/heads/device-id-rework:refs/remotes/device-id/device-id-rework
 	tagOpt = --no-tags
+[remote "kapi"]
+	url = korg:sashal/kapi.git
+	fetch = +refs/heads/spec:refs/remotes/kapi/spec
+	tagOpt = --no-tags
 [maintenance]
 	auto = false
 	strategy = incremental
