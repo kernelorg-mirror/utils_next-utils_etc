@@ -111,7 +111,7 @@ Guenter Roeck <linux@roeck-us.net>	git	hwmon-fixes	-	hwmon	no
 Dan Williams <dan.j.williams@intel.com>	git	nvdimm-fixes	-	libnvdimm-fixes	no
 Dan Williams <dan.j.williams@intel.com>, Dave Jiang <dave.jiang@intel.com>	git	cxl-fixes	-	fixes	no
 Marek Szyprowski <m.szyprowski@samsung.com>	git	dma-mapping-fixes	-	dma-mapping-fixes	no
-Hans de Goede <hansg@kernel.org>, Mark Gross <markgross@kernel.org>	git	drivers-x86-fixes	-	fixes	no
+Ilpo Järvinen <ilpo.jarvinen@linux.intel.com>, Hans de Goede <hansg@kernel.org>, Mark Gross <markgross@kernel.org>	git	drivers-x86-fixes	-	fixes	no
 Krzysztof Kozlowski <krzk@kernel.org>	git	samsung-krzk-fixes	-	fixes	no
 Krzysztof Kozlowski <krzk@kernel.org>, Sylwester Nawrocki <s.nawrocki@samsung.com>	git	pinctrl-samsung-fixes	-	fixes	no
 Bartosz Golaszewski <brgl@bgdev.pl>	git	pinctrl-qcom-fixes	-	pinctrl-qcom/for-current	no
@@ -350,7 +350,7 @@ Juergen Gross <jgross@suse.com>, Konrad Rzeszutek Wilk <konrad.wilk@oracle.com>,
 Dennis Zhou <dennis@kernel.org>, Tejun Heo <tj@kernel.org>, Christoph Lameter <cl@linux-foundation.org>, Ingo Molnar <mingo@kernel.org>	git	percpu	-	for-next	no
 Tejun Heo <tj@kernel.org>	git	workqueues	-	for-next	no
 Tejun Heo <tj@kernel.org>	git	sched-ext	-	for-next	no
-Hans de Goede <hansg@kernel.org>, Mark Gross <markgross@kernel.org>	git	drivers-x86	-	for-next	no
+Ilpo Järvinen <ilpo.jarvinen@linux.intel.com>, Hans de Goede <hansg@kernel.org>, Mark Gross <markgross@kernel.org>	git	drivers-x86	-	for-next	no
 Benson Leung <bleung@google.com>, Guenter Roeck <groeck@chromium.org>, Dmitry Torokhov <dmitry.torokhov@gmail.com>	git	chrome-platform	-	for-next	no
 Tzung-Bi Shih <tzungbi@kernel.org>, Chrome Platform <chrome-platform@lists.linux.dev>	git	chrome-platform-firmware	-	for-firmware-next	no
 Sebastian Reichel <sre@kernel.org>	git	hsi	-	for-next	no
