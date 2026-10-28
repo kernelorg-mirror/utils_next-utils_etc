@@ -145,7 +145,7 @@ Ulf Hansson <ulf.hansson@linaro.org>	git	pmdomain-fixes	-	fixes	no
 Andi Shyti <andi.shyti@kernel.org>	git	i2c-andi-fixes	-	i2c/i2c-fixes	no
 Igor Korotin <igor.korotin@linux.dev>	git	i2c-rust-fixes	-	rust-i2c-fixes	no
 Andreas Larsson <andreas@gaisler.com>	git	sparc-fixes	-	for-linus	no
-Mike Turquette <mturquette@baylibre.com>, Stephen Boyd <sboyd@kernel.org>	git	clk-fixes	-	clk-fixes	no
+Brian Masney <bmasney@redhat.com>, Jerome Brunet <jbrunet@baylibre.com>, Stephen Boyd <sboyd@kernel.org>	git	clk-fixes	-	clk-fixes	no
 Drew Fustini <fustini@kernel.org>	git	thead-clk-fixes	-	thead-clk-fixes	no
 Drew Fustini <fustini@kernel.org>	git	tenstorrent-clk-fixes	-	tenstorrent-clk-fixes	no
 Drew Fustini <fustini@kernel.org>	git	fustini-config-fixes	-	riscv-config-fixes	no
@@ -229,7 +229,7 @@ Drew Fustini <fustini@kernel.org>	git	thead-dt	-	thead-dt-for-next	no
 Nishanth Menon <nm@ti.com>, Tero Kristo <kristo@kernel.org>, Santosh Shilimkar <ssantosh@kernel.org>	git	ti	-	ti-next	no
 Michal Simek <monstr@monstr.eu>	git	xilinx	-	for-next	no
 Dinh Nguyen <dinguyen@kernel.org>	git	socfpga	-	for-next	no
-Mike Turquette <mturquette@baylibre.com>, Stephen Boyd <sboyd@kernel.org>	git	clk	-	clk-next	no
+Brian Masney <bmasney@redhat.com>, Jerome Brunet <jbrunet@baylibre.com>, Stephen Boyd <sboyd@kernel.org>	git	clk	-	clk-next	no
 Abel Vesa <abelvesa@kernel.org>	git	clk-imx	-	for-next	no
 Geert Uytterhoeven <geert@linux-m68k.org>	git	clk-renesas	-	renesas-clk	no
 Drew Fustini <fustini@kernel.org>	git	thead-clk	-	thead-clk-for-next	no
