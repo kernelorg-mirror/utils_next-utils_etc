@@ -1671,6 +1671,10 @@
 	url = gh:Rust-for-Linux/linux.git
 	fetch = +refs/heads/xarray-next:refs/remotes/rust-xarray/xarray-next
 	tagOpt = --no-tags
+[remote "rxarray"]
+	url = korg:da.gomez/linux.git
+	fetch = +refs/heads/rxarray-next:refs/remotes/rxarray/rxarray-next
+	tagOpt = --no-tags
 [remote "devsec-tsm-fixes"]
 	url = korg:devsec/tsm.git
 	tagOpt = --no-tags
