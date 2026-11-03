@@ -191,6 +191,7 @@ Miguel Ojeda <ojeda@kernel.org>	git	compiler-attributes	-	compiler-attributes	no
 Marek Szyprowski <m.szyprowski@samsung.com>	git	dma-mapping	-	dma-mapping-for-next	no
 Arnd Bergmann <arnd@arndb.de>	git	asm-generic	-	master	no
 Matt Turner <mattst88@gmail.com>	git	alpha	-	alpha-next	no
+Magnus Lindholm <linmag7@gmail.com>	git	alpha-magnus	-	for-next	no
 Russell King <linux@armlinux.org.uk>	git	arm	-	for-next	no
 Catalin Marinas <catalin.marinas@arm.com>, Will Deacon <will@kernel.org>	git	arm64	-	for-next/core	no
 Will Deacon <will@kernel.org>	git	arm-perf	-	for-next/perf	no

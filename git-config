@@ -1631,6 +1631,10 @@
 	url = korg:mattst88/alpha.git
 	fetch = +refs/heads/alpha-next:refs/remotes/alpha/alpha-next
 	tagOpt = --no-tags
+[remote "alpha-magnus"]
+	url = korg:lindholm/alpha.git
+	fetch = +refs/heads/for-next:refs/remotes/alpha-magnus/for-next
+	tagOpt = --no-tags
 [remote "rust-pin-init"]
 	url = gh:Rust-for-Linux/linux.git
 	fetch = +refs/heads/pin-init-next:refs/remotes/rust-pin-init/pin-init-next
