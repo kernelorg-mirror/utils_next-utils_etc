@@ -120,7 +120,7 @@ Krzysztof Kozlowski <krzk@kernel.org>	git	dt-krzk-fixes	-	fixes	no
 Martin K. Petersen <martin.petersen@oracle.com>	git	scsi-fixes	-	fixes	no
 Dave Airlie <airlied@redhat.com>, DRI <dri-devel@lists.freedesktop.org>	git	drm-fixes	-	drm-fixes	no
 Simona Vetter <simona.vetter@ffwll.ch>, Jani Nikula <jani.nikula@linux.intel.com>, Joonas Lahtinen <joonas.lahtinen@linux.intel.com>, Rodrigo Vivi <rodrigo.vivi@intel.com>, Intel Graphics <intel-gfx@lists.freedesktop.org>, DRI <dri-devel@lists.freedesktop.org>	git	drm-intel-fixes	-	for-linux-next-fixes	no
-Ulf Hansson <ulf.hansson@linaro.org>	git	mmc-fixes	-	fixes	no
+Ulf Hansson <ulfh@kernel.org>	git	mmc-fixes	-	fixes	no
 Alexandre Belloni <alexandre.belloni@bootlin.com>	git	rtc-fixes	-	rtc-fixes	no
 Johan Hovold <johan@kernel.org>	git	gnss-fixes	-	gnss-linus	no
 Wei Liu <wei.liu@kernel.org>	git	hyperv-fixes	-	hyperv-fixes	no
@@ -141,7 +141,7 @@ Sebastian Reichel <sre@kernel.org>	git	battery-fixes	-	fixes	no
 Jason Gunthorpe <jgg@nvidia.com>	git	iommufd-fixes	-	for-rc	no
 Miguel Ojeda <ojeda@kernel.org>	git	rust-fixes	-	rust-fixes	no
 Krzysztof Kozlowski <krzk@kernel.org>	git	w1-fixes	-	fixes	no
-Ulf Hansson <ulf.hansson@linaro.org>	git	pmdomain-fixes	-	fixes	no
+Ulf Hansson <ulfh@kernel.org>	git	pmdomain-fixes	-	fixes	no
 Andi Shyti <andi.shyti@kernel.org>	git	i2c-andi-fixes	-	i2c/i2c-fixes	no
 Igor Korotin <igor.korotin@linux.dev>	git	i2c-rust-fixes	-	rust-i2c-fixes	no
 Andreas Larsson <andreas@gaisler.com>	git	sparc-fixes	-	for-linus	no
@@ -271,7 +271,7 @@ Rafael J. Wysocki <rafael@kernel.org>	git	pm	-	linux-next	no
 Viresh Kumar <viresh.kumar@linaro.org>	git	cpufreq-arm	-	cpufreq/arm/linux-next	no
 Shuah Khan <shuah@kernel.org>	git	cpupower	-	cpupower	no
 Chanwoo Choi <cw00.choi@samsung.com>	git	devfreq	-	devfreq-next	no
-Ulf Hansson <ulf.hansson@linaro.org>	git	pmdomain	-	next	no
+Ulf Hansson <ulfh@kernel.org>	git	pmdomain	-	next	no
 Viresh Kumar <viresh.kumar@linaro.org>	git	opp	-	opp/linux-next	no
 Daniel Lezcano <daniel.lezcano@linaro.org>, Zhang Rui <rui.zhang@intel.com>	git	thermal	-	thermal/linux-next	no
 Jason Gunthorpe <jgg@nvidia.com>, Leon Romanovsky <leonro@nvidia.com>	git	rdma	-	for-next	no
@@ -314,7 +314,7 @@ Jens Axboe <axboe@kernel.dk>	git	block	-	for-next	no
 Alasdair G Kergon <agk@redhat.com>, Mike Snitzer <snitzer@kernel.org>	git	device-mapper	-	for-next	no
 Damien Le Moal <damien.lemoal@opensource.wdc.com>	git	libata	-	for-next	no
 Dominik Brodowski <linux@dominikbrodowski.net>	git	pcmcia	-	pcmcia-next	no
-Ulf Hansson <ulf.hansson@linaro.org>	git	mmc	-	next	no
+Ulf Hansson <ulfh@kernel.org>	git	mmc	-	next	no
 Lee Jones <lee@kernel.org>	git	mfd	-	for-mfd-next	no
 Lee Jones <lee@kernel.org>	git	backlight	-	for-backlight-next	no
 Sebastian Reichel <sre@kernel.org>	git	battery	-	for-next	no
